@@ -1,9 +1,9 @@
 *
 !lazygit
-!lazygit/*
+!lazygit/**
 !fish
-!fish/*
+!fish/**
 !warp-terminal
-!warp-terminal/*
+!warp-terminal/**
 !.gitignore
 !starship.toml

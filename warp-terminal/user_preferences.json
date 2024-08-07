@@ -1,24 +1,24 @@
 {
   "prefs": {
-    "HonorPS1": "true",
-    "ChangelogVersions": "{\"v0.2024.07.16.08.02.stable_03\":true,\"v0.2024.07.23.08.02.stable_01\":true,\"v0.2024.07.30.08.02.stable_01\":true}",
+    "ReceivedReferralTheme": "\"Inactive\"",
+    "SameLinePromptBlockState": "\"DoNotShow\"",
+    "AgentModeOnboardingBlockShown": "true",
     "TelemetryEnabled": "true",
-    "Theme": "\"Dark\"",
+    "ExperimentId": "57e732ae-c0fa-4106-818d-7aa8011fd681",
+    "ChangelogVersions": "{\"v0.2024.07.16.08.02.stable_03\":true,\"v0.2024.07.23.08.02.stable_01\":true,\"v0.2024.07.30.08.02.stable_01\":true}",
     "AutosuggestionAcceptedCount": "2",
-    "FontSize": "14.0",
-    "LineHeightRatio": "1.3",
-    "AIRequestLimitInfo": "{\"limit\":40,\"num_requests_used_since_refresh\":0,\"next_refresh_time\":\"2024-08-21T03:24:31.945011Z\"}",
-    "FontName": "\"JetBrainsMono Nerd Font\"",
+    "NotebookFontSize": "14.0",
     "AIAssistantRequestLimitInfo": "{\"limit\":40,\"num_requests_used_since_refresh\":0,\"next_refresh_time\":\"2024-08-21T03:24:31.945011Z\"}",
     "Notifications": "{\"mode\":\"Enabled\",\"is_long_running_enabled\":true,\"long_running_threshold\":{\"secs\":30,\"nanos\":0},\"is_password_prompt_enabled\":true}",
-    "AgentModeOnboardingBlockShown": "true",
-    "NotebookFontSize": "14.0",
+    "AIRequestLimitInfo": "{\"limit\":40,\"num_requests_used_since_refresh\":0,\"next_refresh_time\":\"2024-08-21T03:24:31.945011Z\"}",
+    "HonorPS1": "true",
     "CrashReportingEnabled": "true",
+    "LineHeightRatio": "1.3",
+    "OverrideOpacity": "90",
     "HasAutoOpenedWelcomeFolder": "true",
     "WelcomeTipsFeaturesUsed": "[{\"Hint\":\"BlockAction\"},{\"Hint\":\"BlockSelect\"},{\"Hint\":\"CreateBlock\"},{\"Action\":\"ThemePicker\"}]",
-    "ExperimentId": "57e732ae-c0fa-4106-818d-7aa8011fd681",
-    "OverrideOpacity": "90",
-    "ReceivedReferralTheme": "\"Inactive\"",
-    "SameLinePromptBlockState": "\"DoNotShow\""
+    "FontSize": "14.0",
+    "FontName": "\"JetBrainsMono Nerd Font\"",
+    "Theme": "\"Dark\""
   }
 }
