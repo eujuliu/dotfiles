@@ -10,7 +10,7 @@ function change_aws_profile
         return 1
     end
 
-    set selected_profile (echo $profiles | fzf --prompt="Select AWS profile: ")
+    set selected_profile (printf '%s\n' $profiles | fzf --prompt="Select AWS profile: ")
 
     if test -z "$selected_profile"
         echo "No profile selected."
