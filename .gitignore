@@ -7,3 +7,5 @@
 !warp-terminal/**
 !.gitignore
 !starship.toml
+!obs-studio
+!obs-studio/**

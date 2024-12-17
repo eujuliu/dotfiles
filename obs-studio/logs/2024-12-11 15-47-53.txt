@@ -1,0 +1,284 @@
+15:47:53.553: Platform: Wayland
+15:47:53.554: CPU Name: AMD Ryzen 5 3600 6-Core Processor
+15:47:53.554: CPU Speed: 4172.821MHz
+15:47:53.554: Physical Cores: 6, Logical Cores: 12
+15:47:53.554: Physical Memory: 15915MB Total, 7312MB Free
+15:47:53.554: Kernel Version: Linux 6.12.4-arch1-1
+15:47:53.554: Distribution: "Arch Linux" Unknown
+15:47:53.554: Desktop Environment: GNOME (gnome)
+15:47:53.554: Session Type: wayland
+15:47:53.557: Qt Version: 6.8.1 (runtime), 6.8.1 (compiled)
+15:47:53.557: Portable mode: false
+15:47:53.629: OBS 31.0.0-1 (linux)
+15:47:53.629: ---------------------------------
+15:47:53.630: ---------------------------------
+15:47:53.630: audio settings reset:
+15:47:53.630: 	samples per sec: 48000
+15:47:53.630: 	speakers:        2
+15:47:53.630: 	max buffering:   960 milliseconds
+15:47:53.630: 	buffering type:  dynamically increasing
+15:47:53.631: ---------------------------------
+15:47:53.631: Initializing OpenGL...
+15:47:53.631: Using EGL/Wayland
+15:47:53.678: Initialized EGL 1.5
+15:47:53.744: Loading up OpenGL on adapter NVIDIA Corporation NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
+15:47:53.744: OpenGL loaded successfully, version 3.3.0 NVIDIA 565.77, shading language 3.30 NVIDIA via Cg compiler
+15:47:53.861: ---------------------------------
+15:47:53.861: video settings reset:
+15:47:53.861: 	base resolution:   1920x1080
+15:47:53.861: 	output resolution: 1280x720
+15:47:53.861: 	downscale filter:  Bicubic
+15:47:53.861: 	fps:               30/1
+15:47:53.861: 	format:            NV12
+15:47:53.861: 	YUV mode:          Rec. 709/Partial
+15:47:53.861: NV12 texture support enabled
+15:47:53.861: P010 texture support not available
+15:47:53.861: Audio monitoring device:
+15:47:53.861: 	name: Default
+15:47:53.861: 	id: default
+15:47:53.861: ---------------------------------
+15:47:53.870: Failed to load 'en-US' text for module: 'decklink-captions.so'
+15:47:53.879: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+15:47:53.887: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+15:47:53.887: Failed to initialize module 'decklink.so'
+15:47:54.058: [pipewire] Available capture sources:
+15:47:54.058: [pipewire]     - Monitor source
+15:47:54.058: [pipewire]     - Window source
+15:47:54.080: v4l2loopback not installed, virtual camera not registered
+15:47:54.207: VAAPI: Failed to initialize display in vaapi_device_h264_supported
+15:47:54.207: FFmpeg VAAPI H264 encoding not supported
+15:47:54.207: VAAPI: Failed to initialize display in vaapi_device_av1_supported
+15:47:54.207: FFmpeg VAAPI AV1 encoding not supported
+15:47:54.207: VAAPI: Failed to initialize display in vaapi_device_hevc_supported
+15:47:54.207: FFmpeg VAAPI HEVC encoding not supported
+15:47:55.063: [obs-nvenc] NVENC version: 12.1 (compiled) / 12.2 (driver), CUDA driver version: 12.70, AV1 supported: false
+15:47:55.162: ---------------------------------
+15:47:55.162:   Loaded Modules:
+15:47:55.162:     text-freetype2.so
+15:47:55.162:     rtmp-services.so
+15:47:55.162:     obs-x264.so
+15:47:55.162:     obs-webrtc.so
+15:47:55.162:     obs-vst.so
+15:47:55.162:     obs-transitions.so
+15:47:55.162:     obs-qsv11.so
+15:47:55.162:     obs-outputs.so
+15:47:55.162:     obs-nvenc.so
+15:47:55.162:     obs-libfdk.so
+15:47:55.162:     obs-filters.so
+15:47:55.162:     obs-ffmpeg.so
+15:47:55.162:     linux-v4l2.so
+15:47:55.162:     linux-pulseaudio.so
+15:47:55.162:     linux-pipewire.so
+15:47:55.162:     linux-jack.so
+15:47:55.162:     linux-capture.so
+15:47:55.162:     linux-alsa.so
+15:47:55.162:     image-source.so
+15:47:55.162:     frontend-tools.so
+15:47:55.162:     decklink-output-ui.so
+15:47:55.162:     decklink-captions.so
+15:47:55.162: ---------------------------------
+15:47:55.162: ---------------------------------
+15:47:55.162: Available Encoders:
+15:47:55.162:   Video Encoders:
+15:47:55.162: 	- ffmpeg_svt_av1 (SVT-AV1)
+15:47:55.162: 	- ffmpeg_aom_av1 (AOM AV1)
+15:47:55.162: 	- obs_nvenc_h264_tex (NVIDIA NVENC H.264)
+15:47:55.162: 	- obs_nvenc_hevc_tex (NVIDIA NVENC HEVC)
+15:47:55.162: 	- obs_x264 (x264)
+15:47:55.162:   Audio Encoders:
+15:47:55.162: 	- ffmpeg_aac (FFmpeg AAC)
+15:47:55.162: 	- ffmpeg_opus (FFmpeg Opus)
+15:47:55.162: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+15:47:55.162: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+15:47:55.162: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+15:47:55.162: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+15:47:55.162: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+15:47:55.162: 	- libfdk_aac (libfdk AAC)
+15:47:55.162: ==== Startup complete ===============================================
+15:47:55.166: No scene file found, creating default scene
+15:47:55.211: All scene data cleared
+15:47:55.211: ------------------------------------------------
+15:47:55.220: pulse-input: Server name: 'PulseAudio (on PipeWire 1.2.7) 15.0.0'
+15:47:55.220: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+15:47:55.220: pulse-input: Started recording from 'alsa_output.usb-3142_fifine_Microphone-00.analog-stereo.monitor' (default)
+15:47:55.221: pulse-input: Server name: 'PulseAudio (on PipeWire 1.2.7) 15.0.0'
+15:47:55.221: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+15:47:55.221: pulse-input: Started recording from 'alsa_input.usb-3142_fifine_Microphone-00.analog-stereo' (default)
+15:47:55.221: Switched to scene 'Scene'
+15:47:55.221: Created scene collection 'Untitled' (clean, Untitled.json)
+15:47:55.221: ------------------------------------------------
+15:47:55.785: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: Desktop Audio)
+15:47:55.785: 
+15:48:16.160: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db297d8c70
+15:48:18.503: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db297cf6d0
+15:48:20.226: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db297cb350
+15:48:21.289: 
+15:48:21.289: ==== Auto-config wizard testing commencing ======
+
+15:48:22.893: Number of remaining views: 1
+15:48:22.893: ---------------------------------
+15:48:22.893: video settings reset:
+15:48:22.893: 	base resolution:   1920x1080
+15:48:22.893: 	output resolution: 1920x1080
+15:48:22.893: 	downscale filter:  Bicubic
+15:48:22.893: 	fps:               60/1
+15:48:22.893: 	format:            NV12
+15:48:22.893: 	YUV mode:          Rec. 709/Partial
+15:48:22.893: NV12 texture support enabled
+15:48:22.893: P010 texture support not available
+15:48:22.894: 
+15:48:22.894: ==== Auto-config wizard testing stopping ========
+
+15:48:22.895: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2969d750
+15:48:34.764: Settings changed (general)
+15:48:34.764: ------------------------------------------------
+15:48:48.445: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2ace8680
+15:48:55.064: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2cc04a10
+15:48:59.279: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2957e070
+15:49:02.846: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2adb0ae0
+15:49:07.104: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2acef980
+15:49:18.148: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2adba790
+15:49:28.049: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2aebaad0
+15:49:35.710: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2c1b5900
+15:50:05.866: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2c16c8e0
+15:50:08.171: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2c5d9520
+15:50:12.416: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2af33580
+15:50:27.749: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2ac15fe0
+15:50:40.779: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2ad74480
+15:50:44.398: Settings changed (outputs)
+15:50:44.398: ------------------------------------------------
+15:51:17.851: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2674fc30
+15:51:20.417: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2674fc30
+15:51:26.561: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db280dbef0
+15:51:27.477: Settings changed (outputs)
+15:51:27.477: ------------------------------------------------
+15:51:31.095: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2adc1a90
+15:51:31.987: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2c061cd0
+15:51:37.039: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2cb2d390
+15:51:42.267: Source 'Scene' renamed to 'Gravação'
+15:51:49.051: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2cb35b10
+15:51:50.520: PipeWire initialized
+15:51:50.522: User added source 'Screen Capture (PipeWire)' (pipewire-screen-capture-source) to scene 'Gravação'
+15:51:50.760: [pipewire] Screencast session created
+15:51:50.760: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2ad5ad50
+15:51:50.783: [pipewire] Asking for monitor and window
+15:51:54.247: [pipewire] source selected, setting up screencast
+15:51:54.250: [pipewire] Server version: 1.2.7
+15:51:54.250: [pipewire] Library version: 1.2.7
+15:51:54.250: [pipewire] Header version: 1.2.7
+15:51:54.255: [pipewire] Created stream 0x64db2bcf49b0
+15:51:54.255: [pipewire] Stream 0x64db2bcf49b0 state: "connecting" (error: none)
+15:51:54.255: [pipewire] Playing stream 0x64db2bcf49b0
+15:51:54.255: [pipewire] Stream 0x64db2bcf49b0 state: "paused" (error: none)
+15:51:54.261: [pipewire] Negotiated format:
+15:51:54.261: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+15:51:54.261: [pipewire]     Modifier: 0x0
+15:51:54.261: [pipewire]     Size: 1920x1080
+15:51:54.261: [pipewire]     Framerate: 0/1
+15:51:54.263: [pipewire] Negotiated format:
+15:51:54.263: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+15:51:54.263: [pipewire]     Modifier: 0x300000000e08014
+15:51:54.263: [pipewire]     Size: 1920x1080
+15:51:54.263: [pipewire]     Framerate: 0/1
+15:51:54.300: [pipewire] Stream 0x64db2bcf49b0 state: "streaming" (error: none)
+15:52:01.184: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db26347050
+15:52:46.112: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2cb8e000
+15:53:11.042: [obs-nvenc: 'advanced_video_recording'] settings:
+15:53:11.042: 	codec:        H264
+15:53:11.042: 	rate_control: CBR
+15:53:11.042: 	bitrate:      60000
+15:53:11.042: 	keyint:       250
+15:53:11.042: 	preset:       p5
+15:53:11.042: 	tuning:       hq
+15:53:11.042: 	multipass:    qres
+15:53:11.042: 	profile:      high
+15:53:11.042: 	width:        1920
+15:53:11.042: 	height:       1080
+15:53:11.042: 	b-frames:     2
+15:53:11.042: 	b-ref-mode:   0
+15:53:11.042: 	lookahead:    true (8 frames)
+15:53:11.042: 	aq:           true
+15:53:11.042: 
+15:53:11.122: ---------------------------------
+15:53:11.123: [FFmpeg aac encoder: 'Track1'] bitrate: 160, channels: 2, channel_layout: stereo, track: 1
+15:53:11.123: 
+15:53:11.139: ==== Recording Start ===============================================
+15:53:11.139: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/julio/Data/Videos/Bruto/2024-12-11 15-53-10.mkv'...
+15:53:24.449: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db29deacb0
+15:53:24.767: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/julio/Data/Videos/Bruto/2024-12-11 15-53-10.mkv' stopped
+15:53:24.767: Output 'adv_file_output': stopping
+15:53:24.767: Output 'adv_file_output': Total frames output: 800
+15:53:24.767: Output 'adv_file_output': Total drawn frames: 818
+15:53:24.767: ==== Recording Stop ================================================
+15:54:11.910: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2ad148f0
+15:54:23.019: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2b2a0830
+15:54:26.897: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2b2a0510
+15:54:31.790: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2b2a0510
+15:54:33.807: Settings changed (outputs)
+15:54:33.807: ------------------------------------------------
+15:54:52.527: Settings changed (outputs)
+15:54:52.527: ------------------------------------------------
+15:55:06.618: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db29d226a0
+15:55:46.099: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2bc6c5c0
+15:55:50.703: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2ad10db0
+15:56:08.378: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2ad04a30
+15:56:09.727: Settings changed (outputs)
+15:56:09.727: ------------------------------------------------
+15:56:09.738: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2c311da0
+15:56:13.324: [obs-nvenc: 'advanced_video_recording'] settings:
+15:56:13.324: 	codec:        H264
+15:56:13.324: 	rate_control: CBR
+15:56:13.324: 	bitrate:      10000
+15:56:13.324: 	keyint:       250
+15:56:13.324: 	preset:       p5
+15:56:13.324: 	tuning:       hq
+15:56:13.324: 	multipass:    qres
+15:56:13.324: 	profile:      high
+15:56:13.324: 	width:        1920
+15:56:13.324: 	height:       1080
+15:56:13.324: 	b-frames:     2
+15:56:13.324: 	b-ref-mode:   0
+15:56:13.324: 	lookahead:    true (8 frames)
+15:56:13.324: 	aq:           true
+15:56:13.324: 
+15:56:13.387: libfdk_aac encoder created
+15:56:13.387: libfdk_aac bitrate: 160, channels: 2
+15:56:13.399: ==== Recording Start ===============================================
+15:56:13.399: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/julio/Data/Videos/Bruto/2024-12-11 15-56-13.mkv'...
+15:56:48.950: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db2bf8a400
+15:56:49.268: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/julio/Data/Videos/Bruto/2024-12-11 15-56-13.mkv' stopped
+15:56:49.268: Output 'adv_file_output': stopping
+15:56:49.268: Output 'adv_file_output': Total frames output: 2134
+15:56:49.268: Output 'adv_file_output': Total drawn frames: 2151 (2152 attempted)
+15:56:49.268: Output 'adv_file_output': Number of lagged frames due to rendering lag/stalls: 1 (0.0%)
+15:56:49.268: Video stopped, number of skipped frames due to encoding lag: 1/2150 (0.0%)
+15:56:49.268: ==== Recording Stop ================================================
+15:56:49.519: libfdk_aac encoder destroyed
+15:56:50.077: Switched to Preview/Program mode
+15:56:50.077: ------------------------------------------------
+15:56:51.324: Switched to scene 'Gravação'
+15:56:51.374: Switched to regular Preview mode
+15:56:51.374: ------------------------------------------------
+15:57:04.469: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x64db29c59dd0
+15:58:34.169: [obs-nvenc: 'advanced_video_recording'] settings:
+15:58:34.169: 	codec:        H264
+15:58:34.169: 	rate_control: CBR
+15:58:34.169: 	bitrate:      10000
+15:58:34.169: 	keyint:       250
+15:58:34.169: 	preset:       p5
+15:58:34.169: 	tuning:       hq
+15:58:34.169: 	multipass:    qres
+15:58:34.169: 	profile:      high
+15:58:34.169: 	width:        1920
+15:58:34.169: 	height:       1080
+15:58:34.169: 	b-frames:     2
+15:58:34.169: 	b-ref-mode:   0
+15:58:34.169: 	lookahead:    true (8 frames)
+15:58:34.169: 	aq:           true
+15:58:34.169: 
+15:58:34.237: libfdk_aac encoder created
+15:58:34.237: libfdk_aac bitrate: 160, channels: 2
+15:58:34.238: ==== Recording Start ===============================================
+15:58:34.238: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/julio/Data/Videos/Bruto/2024-12-11 15-58-33.mkv'...
+16:12:17.054: adding 21 milliseconds of audio buffering, total audio buffering is now 42 milliseconds (source: Mic/Aux)
+16:12:17.054: 

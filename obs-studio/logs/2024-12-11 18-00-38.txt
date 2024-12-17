@@ -1,0 +1,161 @@
+18:00:38.320: [Safe Mode] Unclean shutdown detected!
+18:00:41.617: [Safe Mode] User elected to launch normally.
+18:00:41.621: Platform: Wayland
+18:00:41.621: CPU Name: AMD Ryzen 5 3600 6-Core Processor
+18:00:41.621: CPU Speed: 4181.445MHz
+18:00:41.621: Physical Cores: 6, Logical Cores: 12
+18:00:41.621: Physical Memory: 15915MB Total, 12215MB Free
+18:00:41.621: Kernel Version: Linux 6.12.4-arch1-1
+18:00:41.621: Distribution: "Arch Linux" Unknown
+18:00:41.621: Desktop Environment: GNOME (gnome)
+18:00:41.621: Session Type: wayland
+18:00:41.624: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x5840bc8370a0
+18:00:41.625: Qt Version: 6.8.1 (runtime), 6.8.1 (compiled)
+18:00:41.625: Portable mode: false
+18:00:41.667: OBS 31.0.0-1 (linux)
+18:00:41.667: ---------------------------------
+18:00:41.668: ---------------------------------
+18:00:41.669: audio settings reset:
+18:00:41.669: 	samples per sec: 48000
+18:00:41.669: 	speakers:        2
+18:00:41.669: 	max buffering:   960 milliseconds
+18:00:41.669: 	buffering type:  dynamically increasing
+18:00:41.673: ---------------------------------
+18:00:41.673: Initializing OpenGL...
+18:00:41.673: Using EGL/Wayland
+18:00:41.735: Initialized EGL 1.5
+18:00:41.831: Loading up OpenGL on adapter NVIDIA Corporation NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
+18:00:41.831: OpenGL loaded successfully, version 3.3.0 NVIDIA 565.77, shading language 3.30 NVIDIA via Cg compiler
+18:00:41.862: ---------------------------------
+18:00:41.862: video settings reset:
+18:00:41.862: 	base resolution:   1920x1080
+18:00:41.862: 	output resolution: 1920x1080
+18:00:41.862: 	downscale filter:  Bicubic
+18:00:41.862: 	fps:               60/1
+18:00:41.862: 	format:            NV12
+18:00:41.862: 	YUV mode:          Rec. 709/Partial
+18:00:41.862: NV12 texture support enabled
+18:00:41.862: P010 texture support not available
+18:00:41.900: Audio monitoring device:
+18:00:41.900: 	name: Default
+18:00:41.900: 	id: default
+18:00:41.901: ---------------------------------
+18:00:41.910: Failed to load 'en-US' text for module: 'decklink-captions.so'
+18:00:41.920: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+18:00:41.933: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+18:00:41.933: Failed to initialize module 'decklink.so'
+18:00:42.109: [pipewire] Available capture sources:
+18:00:42.109: [pipewire]     - Monitor source
+18:00:42.109: [pipewire]     - Window source
+18:00:42.133: v4l2loopback not installed, virtual camera not registered
+18:00:42.262: VAAPI: Failed to initialize display in vaapi_device_h264_supported
+18:00:42.262: FFmpeg VAAPI H264 encoding not supported
+18:00:42.262: VAAPI: Failed to initialize display in vaapi_device_av1_supported
+18:00:42.262: FFmpeg VAAPI AV1 encoding not supported
+18:00:42.262: VAAPI: Failed to initialize display in vaapi_device_hevc_supported
+18:00:42.262: FFmpeg VAAPI HEVC encoding not supported
+18:00:43.013: [obs-nvenc] NVENC version: 12.1 (compiled) / 12.2 (driver), CUDA driver version: 12.70, AV1 supported: false
+18:00:43.143: ---------------------------------
+18:00:43.143:   Loaded Modules:
+18:00:43.143:     text-freetype2.so
+18:00:43.143:     rtmp-services.so
+18:00:43.143:     obs-x264.so
+18:00:43.143:     obs-webrtc.so
+18:00:43.143:     obs-vst.so
+18:00:43.143:     obs-transitions.so
+18:00:43.143:     obs-qsv11.so
+18:00:43.143:     obs-outputs.so
+18:00:43.143:     obs-nvenc.so
+18:00:43.143:     obs-libfdk.so
+18:00:43.143:     obs-filters.so
+18:00:43.143:     obs-ffmpeg.so
+18:00:43.143:     linux-v4l2.so
+18:00:43.143:     linux-pulseaudio.so
+18:00:43.143:     linux-pipewire.so
+18:00:43.143:     linux-jack.so
+18:00:43.143:     linux-capture.so
+18:00:43.143:     linux-alsa.so
+18:00:43.143:     image-source.so
+18:00:43.143:     frontend-tools.so
+18:00:43.143:     decklink-output-ui.so
+18:00:43.143:     decklink-captions.so
+18:00:43.143: ---------------------------------
+18:00:43.143: ---------------------------------
+18:00:43.143: Available Encoders:
+18:00:43.143:   Video Encoders:
+18:00:43.143: 	- ffmpeg_svt_av1 (SVT-AV1)
+18:00:43.143: 	- ffmpeg_aom_av1 (AOM AV1)
+18:00:43.143: 	- obs_nvenc_h264_tex (NVIDIA NVENC H.264)
+18:00:43.143: 	- obs_nvenc_hevc_tex (NVIDIA NVENC HEVC)
+18:00:43.143: 	- obs_x264 (x264)
+18:00:43.143:   Audio Encoders:
+18:00:43.143: 	- ffmpeg_aac (FFmpeg AAC)
+18:00:43.143: 	- ffmpeg_opus (FFmpeg Opus)
+18:00:43.143: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+18:00:43.143: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+18:00:43.143: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+18:00:43.143: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+18:00:43.143: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+18:00:43.143: 	- libfdk_aac (libfdk AAC)
+18:00:43.143: ==== Startup complete ===============================================
+18:00:43.185: All scene data cleared
+18:00:43.185: ------------------------------------------------
+18:00:43.189: pulse-input: Server name: 'PulseAudio (on PipeWire 1.2.7) 15.0.0'
+18:00:43.189: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+18:00:43.189: pulse-input: Started recording from 'alsa_output.usb-3142_fifine_Microphone-00.analog-stereo.monitor' (default)
+18:00:43.189: [Loaded global audio device]: 'Desktop Audio'
+18:00:43.190: pulse-input: Server name: 'PulseAudio (on PipeWire 1.2.7) 15.0.0'
+18:00:43.190: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+18:00:43.190: pulse-input: Started recording from 'alsa_input.usb-3142_fifine_Microphone-00.analog-stereo' (default)
+18:00:43.190: [Loaded global audio device]: 'Mic/Aux'
+18:00:43.191: PipeWire initialized
+18:00:43.192: Switched to scene 'Gravação'
+18:00:43.192: ------------------------------------------------
+18:00:43.192: Loaded scenes:
+18:00:43.192: - scene 'Gravação':
+18:00:43.192:     - source: 'Screen Capture (PipeWire)' (pipewire-screen-capture-source)
+18:00:43.192: ------------------------------------------------
+18:00:43.446: [pipewire] Screencast session created
+18:00:43.466: [pipewire] Asking for monitor and window
+18:00:43.483: [pipewire] source selected, setting up screencast
+18:00:43.487: [pipewire] Server version: 1.2.7
+18:00:43.487: [pipewire] Library version: 1.2.7
+18:00:43.487: [pipewire] Header version: 1.2.7
+18:00:43.569: [pipewire] Created stream 0x5840bde05180
+18:00:43.569: [pipewire] Stream 0x5840bde05180 state: "connecting" (error: none)
+18:00:43.569: [pipewire] Playing stream 0x5840bde05180
+18:00:43.569: [pipewire] Stream 0x5840bde05180 state: "paused" (error: none)
+18:00:43.575: [pipewire] Negotiated format:
+18:00:43.575: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+18:00:43.575: [pipewire]     Modifier: 0x0
+18:00:43.575: [pipewire]     Size: 1920x1080
+18:00:43.575: [pipewire]     Framerate: 0/1
+18:00:43.577: [pipewire] Negotiated format:
+18:00:43.577: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+18:00:43.577: [pipewire]     Modifier: 0x300000000e08014
+18:00:43.577: [pipewire]     Size: 1920x1080
+18:00:43.577: [pipewire]     Framerate: 0/1
+18:00:43.606: [pipewire] Stream 0x5840bde05180 state: "streaming" (error: none)
+18:00:43.760: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: Desktop Audio)
+18:00:43.760: 
+18:00:46.826: [obs-nvenc: 'advanced_video_recording'] settings:
+18:00:46.826: 	codec:        H264
+18:00:46.826: 	rate_control: CBR
+18:00:46.826: 	bitrate:      10000
+18:00:46.826: 	keyint:       250
+18:00:46.826: 	preset:       p5
+18:00:46.826: 	tuning:       hq
+18:00:46.826: 	multipass:    qres
+18:00:46.826: 	profile:      high
+18:00:46.826: 	width:        1920
+18:00:46.826: 	height:       1080
+18:00:46.826: 	b-frames:     2
+18:00:46.826: 	b-ref-mode:   0
+18:00:46.826: 	lookahead:    true (8 frames)
+18:00:46.826: 	aq:           true
+18:00:46.826: 
+18:00:46.910: libfdk_aac encoder created
+18:00:46.910: libfdk_aac bitrate: 160, channels: 2
+18:00:49.113: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 focused surface 0x5840bf7325e0
+18:00:53.188: [pipewire] Stream 0x5840bde05180 state: "paused" (error: none)
+18:00:53.200: The Wayland connection broke during blocking read event. Did the Wayland compositor die?
