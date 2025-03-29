@@ -7,3 +7,7 @@
 !warp-terminal/**
 !.gitignore
 !starship.toml
+!anki-deck-generator
+!anki-deck-generator/**
+!blender
+!blender/**

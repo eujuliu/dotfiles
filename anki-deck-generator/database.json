@@ -1,0 +1,278 @@
+{
+  "blimey": {
+    "status": "created"
+  },
+  "annoyed": {
+    "status": "created"
+  },
+  "refrigerator": {
+    "status": "created"
+  },
+  "harm": {
+    "status": "created",
+    "result": {
+      "meaning": "physical or other injury or damage",
+      "example": "Both deny conspiring to cause actual bodily harm.",
+      "ipa": "\u02c8h\u0251\u025am"
+    }
+  },
+  "stammer": {
+    "status": "created"
+  },
+  "doubted": {
+    "status": "created"
+  },
+  "dare": {
+    "status": "created"
+  },
+  "curse": {
+    "status": "created"
+  },
+  "tight": {
+    "status": "created"
+  },
+  "tosh": {
+    "status": "created"
+  },
+  "glaring": {
+    "status": "created"
+  },
+  "clench": {
+    "status": "created"
+  },
+  "vanish": {
+    "status": "created"
+  },
+  "dunno": {
+    "status": "created"
+  },
+  "lame": {
+    "status": "created"
+  },
+  "scarce": {
+    "status": "created"
+  },
+  "rewarding": {
+    "status": "created"
+  },
+  "subtle": {
+    "status": "created"
+  },
+  "rubbish": {
+    "status": "created"
+  },
+  "ruffle": {
+    "status": "created"
+  },
+  "sag": {
+    "status": "created"
+  },
+  "damp": {
+    "status": "created",
+    "result": {
+      "meaning": "somewhat or slightly wet",
+      "example": "damp [=humid] weather",
+      "ipa": "\u02c8d\u00e6mp"
+    }
+  },
+  "chase": {
+    "status": "created",
+    "result": {
+      "meaning": "the act of following and trying to catch a person, animal, etc.",
+      "example": "a car chase",
+      "ipa": "\u02c8t\u0283e\u026as"
+    }
+  },
+  "seize": {
+    "status": "created",
+    "result": {
+      "meaning": "to take something quickly and keep or hold it",
+      "example": "I seized his arm and made him turn to look at me.",
+      "ipa": "si\u02d0z"
+    }
+  },
+  "whirl": {
+    "status": "created",
+    "result": {
+      "meaning": "to move or go in a circle or curve especially with force or speed",
+      "example": "The cars were whirling around the track.",
+      "ipa": "\u02c8w\u025ar\u0259l"
+    }
+  },
+  "tread": {
+    "status": "created",
+    "result": {
+      "meaning": "to put your foot on something or to press something down with your foot",
+      "example": "Don't tread on the grass.",
+      "ipa": "\u02c8tr\u025bd"
+    }
+  },
+  "bring": {
+    "status": "created",
+    "result": {
+      "meaning": "to come with (something or someone) to a place",
+      "example": "You stay where you are and I'll bring you another drink. = I'll bring another drink to you.",
+      "ipa": "\u02c8br\u026a\u014b"
+    }
+  },
+  "clasp": {
+    "status": "created",
+    "result": {
+      "meaning": "to hold someone or something firmly in your hands or arms",
+      "example": "Lie on your back, clasp your knees and pull them down towards your chest.",
+      "ipa": "\u02c8kl\u0251\u02d0sp"
+    }
+  },
+  "ruefully": {
+    "status": "created",
+    "result": {
+      "meaning": "showing or feeling regret for something done",
+      "example": "He gave me a rueful smile and apologized.",
+      "ipa": "\u02c8ru\u02d0f\u0259l"
+    }
+  },
+  "shiny": {
+    "status": "created",
+    "result": {
+      "meaning": "A shiny surface is bright because it reflects light",
+      "example": "a shiny new car",
+      "ipa": "\u02c8\u0283a\u026ani"
+    }
+  },
+  "scramble": {
+    "status": "created",
+    "result": {
+      "meaning": "to move or climb over something quickly especially while also using your hands",
+      "example": "He scrambled up the ramp.",
+      "ipa": "\u02c8skr\u00e6mb\u0259l"
+    }
+  },
+  "swelling": {
+    "status": "created",
+    "result": {
+      "meaning": "an area on someone's body that is larger than normal because of an illness or injury",
+      "example": "There was a swelling above her eye.",
+      "ipa": "\u02c8sw\u025bl\u026a\u014b"
+    }
+  },
+  "straight": {
+    "status": "created",
+    "result": {
+      "meaning": "not having curves, bends, or angles",
+      "example": "Keep your back straight.",
+      "ipa": "\u02c8stre\u026at"
+    }
+  },
+  "went": {
+    "status": "created",
+    "result": {
+      "meaning": "past simple of go",
+      "example": "They went skating on the pond behind her house.",
+      "ipa": "\u02c8go\u028a"
+    }
+  },
+  "swoop": {
+    "status": "created",
+    "result": {
+      "meaning": "to fly down through the air suddenly",
+      "example": "A hawk swooped down and caught a rabbit in the field.",
+      "ipa": "\u02c8swu\u02d0p"
+    }
+  },
+  "fiercely": {
+    "status": "created",
+    "result": {
+      "meaning": "very violent",
+      "example": "fierce combat/fighting",
+      "ipa": "\u02c8firs"
+    }
+  },
+  "pocket": {
+    "status": "created",
+    "result": {
+      "meaning": "a usually small cloth bag that is sewn into a piece of clothing, a larger bag, etc., and that is open at the top or side so that you can put things into it",
+      "example": "The security guard asked us to empty our pockets. [=to take out everything in our pockets]",
+      "ipa": "\u02c8p\u0251\u02d0k\u0259t"
+    }
+  },
+  "leather": {
+    "status": "created",
+    "result": {
+      "meaning": "animal skin that is chemically treated to preserve it and that is used in making clothes, shoes, furniture, etc. see also",
+      "example": "shoes made of patent leather = patent-leather shoes",
+      "ipa": "\u02c8l\u025b\u00f0\u025a"
+    }
+  },
+  "tie": {
+    "status": "created",
+    "result": {
+      "meaning": "to attach (someone or something) to something with a string, rope, etc.",
+      "example": "She tied (up) the dog to a post and went into the store.",
+      "ipa": "\u02c8ta\u026a"
+    }
+  },
+  "yawn": {
+    "status": "created",
+    "result": {
+      "meaning": "to open your mouth wide while taking in breath usually because you are tired or bored",
+      "example": "Students were yawning in class.",
+      "ipa": "\u02c8j\u0251\u02d0n"
+    }
+  },
+  "puncture": {
+    "status": "created",
+    "result": {
+      "meaning": "a hole or wound made by a sharp point",
+      "example": "a slight puncture of the skin",
+      "ipa": "\u02c8p\u028c\u014bkt\u0283\u025a"
+    }
+  },
+  "scratch": {
+    "status": "created",
+    "result": {
+      "meaning": "to rub your skin with something sharp (such as your fingernails) especially in order to stop an itch",
+      "example": "The dog scratched its ear.",
+      "ipa": "\u02c8skr\u00e6t\u0283"
+    }
+  },
+  "struggling": {
+    "status": "created",
+    "result": {
+      "meaning": "to try very hard to do, achieve, or deal with something that is difficult or that causes problems",
+      "example": "I had to struggle against the impulse to laugh. [=I had to make a strong effort to keep myself from laughing]",
+      "ipa": "\u02c8str\u028cg\u0259l"
+    }
+  },
+  "braced": {
+    "status": "created",
+    "result": {
+      "meaning": "to get ready for something difficult or unpleasant",
+      "example": "The town is bracing for a busy tourist season.",
+      "ipa": "\u02c8bre\u026as"
+    }
+  },
+  "cheeky": {
+    "status": "created",
+    "result": {
+      "meaning": "rude and showing a lack of respect often in a way that seems playful or amusing",
+      "example": "a cheeky grin",
+      "ipa": "\u02c8t\u0283i\u02d0ki"
+    }
+  },
+  "neaten": {
+    "status": "created",
+    "result": {
+      "meaning": "to make (something) orderly or neat to clean up (something)",
+      "example": "I am trying to neaten my desk.",
+      "ipa": "\u02c8ni\u02d0tn\u0329"
+    }
+  },
+  "pricey": {
+    "status": "created",
+    "result": {
+      "meaning": "expensive",
+      "example": "It's a bit pricey but the food is wonderful.",
+      "ipa": "\u02c8pra\u026a.si"
+    }
+  }
+}
