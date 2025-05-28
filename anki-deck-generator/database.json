@@ -29,7 +29,12 @@
     "status": "created"
   },
   "tight": {
-    "status": "created"
+    "status": "created",
+    "result": {
+      "meaning": "Clothes or shoes that are tight fit the body too closely and are uncomfortable.",
+      "example": "That jacket's too tight - you need a bigger size.",
+      "ipa": "ta\u026at"
+    }
   },
   "tosh": {
     "status": "created"
@@ -38,7 +43,12 @@
     "status": "created"
   },
   "clench": {
-    "status": "created"
+    "status": "created",
+    "result": {
+      "meaning": "to close or hold something very tightly, often in a determined or angry way",
+      "example": "She was angry and spoke quietly through clenched teeth.",
+      "ipa": "\u02c8kl\u025bnt\u0283"
+    }
   },
   "vanish": {
     "status": "created"
@@ -62,7 +72,12 @@
     "status": "created"
   },
   "ruffle": {
-    "status": "created"
+    "status": "created",
+    "result": {
+      "meaning": "to move or lift (something) so that it is no longer smooth",
+      "example": "The bird ruffled (up) its feathers.",
+      "ipa": "\u02c8r\u028cf\u0259l"
+    }
   },
   "sag": {
     "status": "created"
@@ -150,7 +165,7 @@
   "swelling": {
     "status": "created",
     "result": {
-      "meaning": "an area on someone's body that is larger than normal because of an illness or injury",
+      "meaning": "a part of your body that has become bigger because of illness or injury",
       "example": "There was a swelling above her eye.",
       "ipa": "\u02c8sw\u025bl\u026a\u014b"
     }
@@ -238,8 +253,8 @@
   "struggling": {
     "status": "created",
     "result": {
-      "meaning": "to try very hard to do, achieve, or deal with something that is difficult or that causes problems",
-      "example": "I had to struggle against the impulse to laugh. [=I had to make a strong effort to keep myself from laughing]",
+      "meaning": "unsuccessful but trying hard to succeed",
+      "example": "It's the story of a struggling artist who marries a rich woman.",
       "ipa": "\u02c8str\u028cg\u0259l"
     }
   },
@@ -254,8 +269,8 @@
   "cheeky": {
     "status": "created",
     "result": {
-      "meaning": "rude and showing a lack of respect often in a way that seems playful or amusing",
-      "example": "a cheeky grin",
+      "meaning": "slightly rude but amusing",
+      "example": "Don't be so cheeky!",
       "ipa": "\u02c8t\u0283i\u02d0ki"
     }
   },
@@ -273,6 +288,998 @@
       "meaning": "expensive",
       "example": "It's a bit pricey but the food is wonderful.",
       "ipa": "\u02c8pra\u026a.si"
+    }
+  },
+  "annihilate": {
+    "status": "created",
+    "result": {
+      "meaning": "to destroy (something or someone) completely",
+      "example": "The enemy troops were annihilated.",
+      "ipa": "\u0259\u02c8naj\u0259\u02ccle\u026at"
+    }
+  },
+  "slim": {
+    "status": "created",
+    "result": {
+      "meaning": "thin in an attractive way",
+      "example": "I was a lot slimmer in those days.",
+      "ipa": "\u02c8sl\u026am"
+    }
+  },
+  "fluky": {
+    "status": "created",
+    "result": {
+      "meaning": "(of something good) happening as the result of chance instead of skill or planning",
+      "example": "There was nothing fluky about her victory or her tactics.",
+      "ipa": "\u02c8flu\u02d0.ki"
+    }
+  },
+  "screwing": {
+    "status": "created",
+    "result": {
+      "meaning": "to attach (something) with a screw",
+      "example": "The cupboards are screwed to the wall.",
+      "ipa": "\u02c8skru\u02d0"
+    }
+  },
+  "matter": {
+    "status": "created",
+    "result": {
+      "meaning": "a situation or subject that is being dealt with or considered",
+      "example": "Getting the money to finance a project like this is no small matter. [=is not an easy thing to do]",
+      "ipa": "\u02c8m\u00e6t\u025a"
+    }
+  },
+  "gotta": {
+    "status": "created",
+    "result": {
+      "meaning": "short form of have got to",
+      "example": "I gotta go now.",
+      "ipa": "\u02c8\u0261\u0251\u02d0.t\u032c\u0259"
+    }
+  },
+  "gleam": {
+    "status": "created",
+    "result": {
+      "meaning": "to produce or reflect a small, bright light",
+      "example": "He polished the table until it gleamed.",
+      "ipa": "\u02c8gli\u02d0m"
+    }
+  },
+  "shame": {
+    "status": "created",
+    "result": {
+      "meaning": "a feeling of guilt, regret, or sadness that you have because you know you have done something wrong",
+      "example": "Shame on you [=you should feel shame] for being so rude.",
+      "ipa": "\u02c8\u0283e\u026am"
+    }
+  },
+  "eager": {
+    "status": "created",
+    "result": {
+      "meaning": "very excited and interested",
+      "example": "eager enthusiasm/anticipation",
+      "ipa": "\u02c8i\u02d0g\u025a"
+    }
+  },
+  "mad": {
+    "status": "created",
+    "result": {
+      "meaning": "extremely silly or stupid",
+      "example": "You're mad to walk home alone at this time of night.",
+      "ipa": "\u02c8m\u00e6d"
+    }
+  },
+  "unfold": {
+    "status": "created",
+    "result": {
+      "meaning": "to spread or cause (something) to spread or straighten out from a folded position",
+      "example": "unfold a map/newspaper",
+      "ipa": "\u02cc\u028cn\u02c8fo\u028ald"
+    }
+  },
+  "bungler": {
+    "status": "created",
+    "result": {
+      "meaning": "to make mistakes in doing (something) to not do (something) well or successfully",
+      "example": "The police bungled [=botched] the investigation and the crime was never solved.",
+      "ipa": "\u02c8b\u028c\u014bg\u0259l"
+    }
+  },
+  "clamber": {
+    "status": "created",
+    "result": {
+      "meaning": "to climb or crawl in an awkward way",
+      "example": "The passengers clambered aboard.",
+      "ipa": "\u02c8kl\u00e6mb\u025a"
+    }
+  },
+  "blame": {
+    "status": "created",
+    "result": {
+      "meaning": "to say or think that a person or thing is responsible for something bad that has happened",
+      "example": "I blame the poor harvest on the weather.",
+      "ipa": "\u02c8ble\u026am"
+    }
+  },
+  "halt": {
+    "status": "created",
+    "result": {
+      "meaning": "to stop (something or someone) from moving or continuing",
+      "example": "The strike halted subways and buses.",
+      "ipa": "\u02c8h\u0251\u02d0lt"
+    }
+  },
+  "rod": {
+    "status": "created",
+    "result": {
+      "meaning": "a straight, thin stick or bar",
+      "example": "a curtain rod",
+      "ipa": "\u02c8r\u0251\u02d0d"
+    }
+  },
+  "quite": {
+    "status": "created",
+    "result": {
+      "meaning": "completely",
+      "example": "The two situations are quite different.",
+      "ipa": "\u02c8kwa\u026at"
+    }
+  },
+  "withstand": {
+    "status": "created",
+    "result": {
+      "meaning": "to not be destroyed or damaged by sth",
+      "example": "I couldn't withstand the rigors of army life.",
+      "ipa": "w\u026a\u00f0\u02c8st\u00e6nd"
+    }
+  },
+  "nearly": {
+    "status": "created",
+    "result": {
+      "meaning": "almost, or not completely",
+      "example": "Nearly all of us got sick that weekend.",
+      "ipa": "\u02c8ni\u025ali"
+    }
+  },
+  "shelf": {
+    "status": "created",
+    "result": {
+      "meaning": "a flat board which is attached to a wall, frame, etc., and on which objects can be placed",
+      "example": "We don't have much shelf space.",
+      "ipa": "\u02c8\u0283\u025blf"
+    }
+  },
+  "wildly": {
+    "status": "created",
+    "result": {
+      "meaning": "in an uncontrolled or extreme way",
+      "example": "He was dancing wildly.",
+      "ipa": "\u02c8waj\u0259ldli"
+    }
+  },
+  "worth": {
+    "status": "created",
+    "result": {
+      "meaning": "to have a particular value, especially in money",
+      "example": "a ruby worth five million dollars",
+      "ipa": "\u02c8w\u025a\u03b8"
+    }
+  },
+  "complain": {
+    "status": "created",
+    "result": {
+      "meaning": "to say that something is wrong or not satisfactory",
+      "example": "If you're unhappy with the service, you should complain to the manager.",
+      "ipa": "k\u0259m\u02c8ple\u026an"
+    }
+  },
+  "awkwardly": {
+    "status": "created",
+    "result": {
+      "meaning": "in a worried or embarrassed way",
+      "example": "The story contained some awkward writing.",
+      "ipa": "\u02c8\u0251\u02d0kw\u025ad"
+    }
+  },
+  "climb": {
+    "status": "created",
+    "result": {
+      "meaning": "to move or go up (something) using your feet and often your hands",
+      "example": "climb the stairs",
+      "ipa": "\u02c8kla\u026am"
+    }
+  },
+  "led": {
+    "status": "created",
+    "result": {
+      "meaning": "past simple and past participle of lead",
+      "example": "You lead and we'll follow right behind you.",
+      "ipa": "\u02cc\u025bl\u02cci\u02d0\u02c8di\u02d0"
+    }
+  },
+  "bustling": {
+    "status": "created",
+    "result": {
+      "meaning": "If a place is bustling, it is full of busy activity.",
+      "example": "She bustled around the kitchen getting ready for dinner guests.",
+      "ipa": "\u02c8b\u028cs\u0259l"
+    }
+  },
+  "crowd": {
+    "status": "created",
+    "result": {
+      "meaning": "a large group of people who have come together",
+      "example": "streets crowded with traffic",
+      "ipa": "\u02c8kra\u028ad"
+    }
+  },
+  "bury": {
+    "status": "created",
+    "result": {
+      "meaning": "to put (a dead person or animal) in a grave",
+      "example": "cultures that bury their dead",
+      "ipa": "\u02c8beri"
+    }
+  },
+  "thought": {
+    "status": "created",
+    "result": {
+      "meaning": "past simple and past participle of think",
+      "example": "I just had a funny thought.",
+      "ipa": "\u02c8\u03b8\u0251\u02d0t"
+    }
+  },
+  "grubby": {
+    "status": "created",
+    "result": {
+      "meaning": "dirty or messy",
+      "example": "Keep your grubby hands off me! [=do not touch me]",
+      "ipa": "\u02c8gr\u028cbi"
+    }
+  },
+  "hurry": {
+    "status": "created",
+    "result": {
+      "meaning": "to move, act, or go quickly",
+      "example": "We'll miss our flight if we don't hurry. = If we don't hurry we'll miss our flight.",
+      "ipa": "\u02c8h\u025ari"
+    }
+  },
+  "glance": {
+    "status": "created",
+    "result": {
+      "meaning": "to look at someone or something very quickly",
+      "example": "She glanced up from her book when he entered the room.",
+      "ipa": "\u02c8gl\u0251\u02d0ns"
+    }
+  },
+  "shabby": {
+    "status": "created",
+    "result": {
+      "meaning": "in poor condition especially because of age or use",
+      "example": "Her first apartment was pretty shabby.",
+      "ipa": "\u02c8\u0283\u00e6bi"
+    }
+  },
+  "lack": {
+    "status": "created",
+    "result": {
+      "meaning": "to not have (something)",
+      "example": "This painting lacks any artistic value.",
+      "ipa": "\u02c8l\u00e6k"
+    }
+  },
+  "chatter": {
+    "status": "created",
+    "result": {
+      "meaning": "to talk in a quick or casual way",
+      "example": "He was chattering [=jabbering] away on a cell phone.",
+      "ipa": "\u02c8t\u0283\u00e6t\u025a"
+    }
+  },
+  "buckle": {
+    "status": "created",
+    "result": {
+      "meaning": "a metal or plastic device that is attached to one end of a belt or strap and that is used to connect it to the other end",
+      "example": "a belt buckle",
+      "ipa": "\u02c8b\u028ck\u0259l"
+    }
+  },
+  "peer": {
+    "status": "created",
+    "result": {
+      "meaning": "to look carefully or with difficulty",
+      "example": "The driver was peering into the distance trying to read the road sign.",
+      "ipa": "\u02c8pi\u025a"
+    }
+  },
+  "hurried": {
+    "status": "created",
+    "result": {
+      "meaning": "done very or too quickly",
+      "example": "We left early, after a hurried breakfast.",
+      "ipa": "\u02c8h\u025arid"
+    }
+  },
+  "puff": {
+    "status": "created",
+    "result": {
+      "meaning": "to breathe smoke from a cigarette, pipe, etc., in and out of the lungs",
+      "example": "The men spent the evening puffing (away) at cigars.",
+      "ipa": "\u02c8p\u028cf"
+    }
+  },
+  "beaming": {
+    "status": "created",
+    "result": {
+      "meaning": "to smile happily",
+      "example": "They stood beaming with satisfaction.",
+      "ipa": "\u02c8bi\u02d0m"
+    }
+  },
+  "delighted": {
+    "status": "created",
+    "result": {
+      "meaning": "very pleased",
+      "example": "They are delighted at the prospect of a visit from their grandchildren.",
+      "ipa": "d\u026a\u02c8la\u026at\u0259d"
+    }
+  },
+  "rather": {
+    "status": "created",
+    "result": {
+      "meaning": "quite; to a slight degree",
+      "example": "It rather annoyed me that he was late picking me up.",
+      "ipa": "\u02c8r\u0251\u02d0\u00f0\u0259"
+    }
+  },
+  "slippery": {
+    "status": "created",
+    "result": {
+      "meaning": "difficult to stand on, move on, or hold because of being smooth, wet, icy, etc.",
+      "example": "The sign cautions: Slippery when wet.",
+      "ipa": "\u02c8sl\u026ap\u0259ri"
+    }
+  },
+  "narrow": {
+    "status": "created",
+    "result": {
+      "meaning": "with little distance between the two edges",
+      "example": "His shoulders are very narrow.",
+      "ipa": "\u02c8nero\u028a"
+    }
+  },
+  "tangle": {
+    "status": "created",
+    "result": {
+      "meaning": "to become or cause (something) to become twisted together",
+      "example": "Her foot was tangled (up) in the cord.",
+      "ipa": "\u02c8t\u00e6\u014bg\u0259l"
+    }
+  },
+  "cling": {
+    "status": "created",
+    "result": {
+      "meaning": "to hold onto something or someone very tightly",
+      "example": "The children clung together under the little umbrella waiting for the storm to pass.",
+      "ipa": "\u02c8kl\u026a\u014b"
+    }
+  },
+  "soaked": {
+    "status": "created",
+    "result": {
+      "meaning": "made completely wet by water or another liquid",
+      "example": "My socks are soaked.",
+      "ipa": "\u02c8so\u028akt"
+    }
+  },
+  "sweat": {
+    "status": "created",
+    "result": {
+      "meaning": "to produce a clear liquid from your skin when you are hot or nervous",
+      "example": "(informal) He was sweating like a pig. [=sweating a lot]",
+      "ipa": "\u02c8sw\u025bt"
+    }
+  },
+  "drown": {
+    "status": "created",
+    "result": {
+      "meaning": "to die by being underwater too long and unable to breathe",
+      "example": "She fell in the river and drowned.",
+      "ipa": "\u02c8dra\u028an"
+    }
+  },
+  "courtyard": {
+    "status": "created",
+    "result": {
+      "meaning": "an open space that is surrounded completely or partly by a building or group of buildings",
+      "example": "The apartment overlooks a courtyard.",
+      "ipa": "\u02c8ko\u025at\u02ccj\u0251\u025ad"
+    }
+  },
+  "dustbin": {
+    "status": "created",
+    "result": {
+      "meaning": "a large container for rubbish from a house or other building, usually made of strong plastic or metal and kept outside",
+      "example": "A quarter of the contents of an average family's dustbin is organic matter.",
+      "ipa": "\u02c8d\u028cst\u02ccb\u026an"
+    }
+  },
+  "grin": {
+    "status": "created",
+    "result": {
+      "meaning": "to smile widely",
+      "example": "He was grinning from ear to ear. [=he was grinning very broadly]",
+      "ipa": "\u02c8gr\u026an"
+    }
+  },
+  "bloke": {
+    "status": "created",
+    "result": {
+      "meaning": "a man, often one who is considered to be ordinary",
+      "example": "I'm just an ordinary bloke. [=guy, fellow, chap]",
+      "ipa": "\u02c8blo\u028ak"
+    }
+  },
+  "nasty": {
+    "status": "created",
+    "result": {
+      "meaning": "very unpleasant to see, smell, taste, etc.",
+      "example": "a nasty-tasting medicine",
+      "ipa": "\u02c8n\u0251\u02d0sti"
+    }
+  },
+  "quiver": {
+    "status": "created",
+    "result": {
+      "meaning": "to shake because of fear, cold, nervousness, etc.",
+      "example": "Her lips quivered when she heard the bad news.",
+      "ipa": "\u02c8kw\u026av\u025a"
+    }
+  },
+  "wriggle": {
+    "status": "created",
+    "result": {
+      "meaning": "to twist from side to side with small quick movements like a worm",
+      "example": "I had trouble getting the wriggling fish off my hook.",
+      "ipa": "\u02c8r\u026ag\u0259l"
+    }
+  },
+  "twisted": {
+    "status": "created",
+    "result": {
+      "meaning": "strange and unpleasant not normal",
+      "example": "He has a twisted [=sick] sense of humor.",
+      "ipa": "\u02c8tw\u026ast\u0259d"
+    }
+  },
+  "plump": {
+    "status": "created",
+    "result": {
+      "meaning": "having a pleasantly soft, rounded body or shape",
+      "example": "a nice plump chicken",
+      "ipa": "\u02c8pl\u028cmp"
+    }
+  },
+  "stacked": {
+    "status": "created",
+    "result": {
+      "meaning": "covered or filled with a large amount of things",
+      "example": "The fridge is stacked with food.",
+      "ipa": "\u02c8st\u00e6kt"
+    }
+  },
+  "slight": {
+    "status": "created",
+    "result": {
+      "meaning": "very small in degree or amount",
+      "example": "There is not the slightest danger [=there is no danger] of that happening.",
+      "ipa": "\u02c8sla\u026at"
+    }
+  },
+  "wound": {
+    "status": "created",
+    "result": {
+      "meaning": "an injury that is caused when a knife, bullet, etc., cuts or breaks the skin",
+      "example": "a gunshot/bullet wound",
+      "ipa": "\u02c8wu\u02d0nd"
+    }
+  },
+  "rub": {
+    "status": "created",
+    "result": {
+      "meaning": "to move sth backward and forward over the surface of sth",
+      "example": "The cat rubbed itself against my leg.",
+      "ipa": "\u02c8r\u028cb"
+    }
+  },
+  "heed": {
+    "status": "created",
+    "result": {
+      "meaning": "to pay attention to (advice, a warning, etc.)",
+      "example": "Many people have heeded his call to volunteer. [=listened to him and volunteered]",
+      "ipa": "\u02c8hi\u02d0d"
+    }
+  },
+  "dearly": {
+    "status": "created",
+    "result": {
+      "meaning": "very much",
+      "example": "her dearly beloved husband [=her husband, whom she loved very much]",
+      "ipa": "\u02c8di\u025ali"
+    }
+  },
+  "seek": {
+    "status": "created",
+    "result": {
+      "meaning": "to search for (someone or something) to try to find (someone or something)",
+      "example": "thrill-seeking travelers [=travelers who want to have very exciting/thrilling experiences]",
+      "ipa": "\u02c8si\u02d0k"
+    }
+  },
+  "beware": {
+    "status": "created",
+    "result": {
+      "meaning": "to be careful to act in a way that shows you know that there may be danger or trouble",
+      "example": "He told them to beware.",
+      "ipa": "b\u026a\u02c8we\u025a"
+    }
+  },
+  "mouldy": {
+    "status": "created",
+    "result": {
+      "meaning": "covered with mold",
+      "example": "moldy bread/fruit",
+      "ipa": "\u02c8mo\u028al.di"
+    }
+  },
+  "leading": {
+    "status": "created",
+    "result": {
+      "meaning": "having great importance, influence, or success",
+      "example": "She's one of the leading authorities/experts on the stock market.",
+      "ipa": "\u02c8li\u02d0d\u026a\u014b"
+    }
+  },
+  "slope": {
+    "status": "created",
+    "result": {
+      "meaning": "to be at an angle to the horizontal",
+      "example": "a slight/gentle slope",
+      "ipa": "\u02c8slo\u028ap"
+    }
+  },
+  "steeply": {
+    "status": "created",
+    "result": {
+      "meaning": "almost straight up and down rising or falling very sharply",
+      "example": "The stairs are very steep.",
+      "ipa": "\u02c8sti\u02d0p"
+    }
+  },
+  "hurtle": {
+    "status": "created",
+    "result": {
+      "meaning": "to move or fall with great speed and force",
+      "example": "We kept to the side of the road as cars and trucks hurtled past us.",
+      "ipa": "\u02c8h\u025atl\u031f"
+    }
+  },
+  "whistle": {
+    "status": "created",
+    "result": {
+      "meaning": "a small device that makes a very high and loud sound when a person blows air through it",
+      "example": "The policeman blew his whistle.",
+      "ipa": "\u02c8w\u026as\u0259l"
+    }
+  },
+  "twist": {
+    "status": "created",
+    "result": {
+      "meaning": "to bend or turn (something) in order to change its shape",
+      "example": "She twisted balloons into the shapes of different animals.",
+      "ipa": "\u02c8tw\u026ast"
+    }
+  },
+  "awkward": {
+    "status": "created",
+    "result": {
+      "meaning": "difficult to use, do, or deal with",
+      "example": "It's an awkward corner, so take it slowly.",
+      "ipa": "\u02c8\u0251\u02d0kw\u025ad"
+    }
+  },
+  "sting": {
+    "status": "created",
+    "result": {
+      "meaning": "to hurt (someone) by piercing the skin with a sharp, pointed part that usually contains poison",
+      "example": "The jellyfish stung the swimmer.",
+      "ipa": "\u02c8st\u026a\u014b"
+    }
+  },
+  "rushed": {
+    "status": "created",
+    "result": {
+      "meaning": "to move or do something very quickly or in a way that shows you are in a hurry",
+      "example": "We were rushing to catch the bus.",
+      "ipa": "\u02c8r\u028c\u0283"
+    }
+  },
+  "burst": {
+    "status": "created",
+    "result": {
+      "meaning": "to break open or into pieces in a sudden and violent way",
+      "example": "Two of the water pipes burst.",
+      "ipa": "\u02c8b\u025ast"
+    }
+  },
+  "plunge": {
+    "status": "created",
+    "result": {
+      "meaning": "to fall or jump suddenly from a high place",
+      "example": "The parachute failed to open, and the jumper plunged to her death. [=died from her fall]",
+      "ipa": "\u02c8pl\u028cn\u02a4"
+    }
+  },
+  "billow": {
+    "status": "created",
+    "result": {
+      "meaning": "a moving cloud or mass of smoke, steam, etc.",
+      "example": "billows of fog",
+      "ipa": "\u02c8b\u026alo\u028a"
+    }
+  },
+  "gather": {
+    "status": "created",
+    "result": {
+      "meaning": "to bring (things or people) together into a group",
+      "example": "She gathered her hair into a ponytail.",
+      "ipa": "\u02c8g\u00e6\u00f0\u025a"
+    }
+  },
+  "breach": {
+    "status": "created",
+    "result": {
+      "meaning": "an act of breaking a law, promise, agreement, or relationship",
+      "example": "He was sued for breach of contract.",
+      "ipa": "\u02c8bri\u02d0t\u0283"
+    }
+  },
+  "swear": {
+    "status": "created",
+    "result": {
+      "meaning": "to make a serious promise",
+      "example": "(Brit) He swore blind [=insisted] (that) he was innocent.",
+      "ipa": "\u02c8swe\u025a"
+    }
+  },
+  "melted": {
+    "status": "created",
+    "result": {
+      "meaning": "to change or to cause (something) to change from a solid to a liquid usually because of heat",
+      "example": "The snow is finally melting.",
+      "ipa": "\u02c8m\u025blt"
+    }
+  },
+  "tuck": {
+    "status": "created",
+    "result": {
+      "meaning": "to push the end of (something, such as a piece of cloth or paper) into or behind something in order to hold it in place, make it look neat, etc.",
+      "example": "The sheets were tucked tightly under the mattress.",
+      "ipa": "\u02c8t\u028ck"
+    }
+  },
+  "amusing": {
+    "status": "created",
+    "result": {
+      "meaning": "causing laughter or enjoyment funny or enjoyable",
+      "example": "It was amusing to hear her tell the story.",
+      "ipa": "\u0259\u02c8mju\u02d0z\u026a\u014b"
+    }
+  },
+  "yell": {
+    "status": "created",
+    "result": {
+      "meaning": "a loud shout, usually when you are angry, in pain, or excited",
+      "example": "She yelled [=shouted] to her friend across the park.",
+      "ipa": "\u02c8j\u025bl"
+    }
+  },
+  "nod": {
+    "status": "created",
+    "result": {
+      "meaning": "to move your head up and down as a way of answering yes or of showing agreement, understanding, or approval",
+      "example": "He nodded in agreement.",
+      "ipa": "\u02c8n\u0251\u02d0d"
+    }
+  },
+  "smuggle": {
+    "status": "created",
+    "result": {
+      "meaning": "to move (someone or something) from one country into another illegally and secretly",
+      "example": "smuggled goods",
+      "ipa": "\u02c8sm\u028cg\u0259l"
+    }
+  },
+  "lend": {
+    "status": "created",
+    "result": {
+      "meaning": "to give (something) to (someone) to be used for a period of time and then returned",
+      "example": "I lent our ladder to the neighbors.",
+      "ipa": "\u02c8l\u025bnd"
+    }
+  },
+  "sneer": {
+    "status": "created",
+    "result": {
+      "meaning": "to smile or laugh at someone or something with an expression on your face that shows dislike and a lack of respect",
+      "example": "She sneered at me in disgust.",
+      "ipa": "\u02c8sni\u025a"
+    }
+  },
+  "rot": {
+    "status": "created",
+    "result": {
+      "meaning": "to slowly decay or cause (something) to decay",
+      "example": "the smell of rotting garbage",
+      "ipa": "\u02c8r\u0251\u02d0t"
+    }
+  },
+  "peel": {
+    "status": "created",
+    "result": {
+      "meaning": "to remove the skin from (a fruit, vegetable, etc.)",
+      "example": "peel the cucumbers",
+      "ipa": "\u02c8pi\u02d0l"
+    }
+  },
+  "swallow": {
+    "status": "created",
+    "result": {
+      "meaning": "to take (something) into your stomach through your mouth and throat",
+      "example": "He swallowed the grape whole.",
+      "ipa": "\u02c8sw\u0251\u02d0lo\u028a"
+    }
+  },
+  "neatly": {
+    "status": "created",
+    "result": {
+      "meaning": "not messy clean and orderly",
+      "example": "Fold the paper to make a neat edge.",
+      "ipa": "\u02c8ni\u02d0t"
+    }
+  },
+  "tingle": {
+    "status": "created",
+    "result": {
+      "meaning": "to have a feeling like the feeling of many small sharp points pressing into your skin",
+      "example": "My arm/leg was numb and tingling.",
+      "ipa": "\u02c8t\u026a\u014bg\u0259l"
+    }
+  },
+  "gloom": {
+    "status": "created",
+    "result": {
+      "meaning": "partial or total darkness",
+      "example": "the gloom of the forest",
+      "ipa": "\u02c8glu\u02d0m"
+    }
+  },
+  "pliable": {
+    "status": "created",
+    "result": {
+      "meaning": "able to bend, fold, or twist easily",
+      "example": "Because the leather is pliable, it's easy to work with.",
+      "ipa": "\u02c8plaj\u0259b\u0259l"
+    }
+  },
+  "relief": {
+    "status": "created",
+    "result": {
+      "meaning": "a pleasant and relaxed feeling that someone has when something unpleasant stops or does not happen",
+      "example": "She breathed a sigh of relief. [=she no longer felt tension, worry, fear, etc.]",
+      "ipa": "r\u026a\u02c8li\u02d0f"
+    }
+  },
+  "optimally": {
+    "status": "created",
+    "result": {
+      "meaning": "best or most effective",
+      "example": "optimal health",
+      "ipa": "\u02c8\u0251\u02d0pt\u0259m\u0259l"
+    }
+  },
+  "achieve": {
+    "status": "created",
+    "result": {
+      "meaning": "to get or reach (something) by working hard",
+      "example": "They achieved high scores on their math tests.",
+      "ipa": "\u0259\u02c8t\u0283i\u02d0v"
+    }
+  },
+  "thus": {
+    "status": "created",
+    "result": {
+      "meaning": "in this way or manner like this",
+      "example": "The judge expressed it thus: Our obligation is to discover the truth.",
+      "ipa": "\u02c8\u00f0\u028cs"
+    }
+  },
+  "crumple": {
+    "status": "created",
+    "result": {
+      "meaning": "to press or squeeze (something) so that it is no longer flat or smooth",
+      "example": "a crumpled napkin/suit/bill",
+      "ipa": "\u02c8kr\u028cmp\u0259l"
+    }
+  },
+  "laden": {
+    "status": "created",
+    "result": {
+      "meaning": "loaded heavily with something having or carrying a large amount of something",
+      "example": "sugar-laden junk food",
+      "ipa": "\u02c8le\u026adn\u0329"
+    }
+  },
+  "chew": {
+    "status": "created",
+    "result": {
+      "meaning": "to use your teeth to cut food into small pieces before you swallow it",
+      "example": "We were taught to chew our food thoroughly before swallowing.",
+      "ipa": "\u02c8t\u0283u\u02d0"
+    }
+  },
+  "briskly": {
+    "status": "created",
+    "result": {
+      "meaning": "in a quick, energetic way",
+      "example": "She answered the phone in a brisk voice.",
+      "ipa": "\u02c8br\u026ask"
+    }
+  },
+  "disgruntled": {
+    "status": "created",
+    "result": {
+      "meaning": "unhappy and annoyed",
+      "example": "He was disgruntled over the lack of recognition he received.",
+      "ipa": "d\u026as\u02c8gr\u028cntl\u031fd"
+    }
+  },
+  "sigh": {
+    "status": "created",
+    "result": {
+      "meaning": "to take in and let out a long, loud breath in a way that shows you are bored, disappointed, relieved, etc.",
+      "example": "He sighed with/in relief when he saw that he passed the test.",
+      "ipa": "\u02c8sa\u026a"
+    }
+  },
+  "hairy": {
+    "status": "created",
+    "result": {
+      "meaning": "covered with a lot of hair",
+      "example": "a hairy chest",
+      "ipa": "\u02c8heri"
+    }
+  },
+  "shove": {
+    "status": "created",
+    "result": {
+      "meaning": "to push (something) with force",
+      "example": "He shoved the door until it finally opened.",
+      "ipa": "\u02c8\u0283\u028cv"
+    }
+  },
+  "heave": {
+    "status": "created",
+    "result": {
+      "meaning": "to lift or pull (something) with effort",
+      "example": "She heaved the door shut.",
+      "ipa": "\u02c8hi\u02d0v"
+    }
+  },
+  "pant": {
+    "status": "created",
+    "result": {
+      "meaning": "to breathe hard and quickly",
+      "example": "The patient was panting for breath. [=breathing heavily]",
+      "ipa": "\u02c8p\u00e6nt"
+    }
+  },
+  "sight": {
+    "status": "created",
+    "result": {
+      "meaning": "the ability to see",
+      "example": "He lost his sight [=he became blind] at a young age.",
+      "ipa": "\u02c8sa\u026at"
+    }
+  },
+  "trolley": {
+    "status": "created",
+    "result": {
+      "meaning": "an electric vehicle that runs along the street on tracks",
+      "example": "a shopping trolley [=(US) cart]",
+      "ipa": "\u02c8tr\u0251\u02d0li"
+    }
+  },
+  "starving": {
+    "status": "created",
+    "result": {
+      "meaning": "dying because of not having enough food",
+      "example": "The famine caused many to starve to death. [=to die from lack of food]",
+      "ipa": "\u02c8st\u0251\u025av"
+    }
+  },
+  "crooked": {
+    "status": "created",
+    "result": {
+      "meaning": "not straight",
+      "example": "a crooked smile/grin",
+      "ipa": "\u02c8kr\u028ak\u0259d"
+    }
+  },
+  "astonishment": {
+    "status": "created",
+    "result": {
+      "meaning": "a feeling of being very surprised",
+      "example": "Much to the astonishment of her friends and family, she left school to pursue her acting career.",
+      "ipa": "\u0259\u02c8st\u0251\u02d0n\u026a\u0283m\u0259nt"
+    }
+  },
+  "reckon": {
+    "status": "created",
+    "result": {
+      "meaning": "to think or believe",
+      "example": "Do you think it will rain? (I) Reckon so. [=I think it will]",
+      "ipa": "\u02c8r\u025bk\u0259n"
+    }
+  },
+  "nibble": {
+    "status": "created",
+    "result": {
+      "meaning": "to eat slowly or with small bites",
+      "example": "We nibbled cheese and crackers.",
+      "ipa": "\u02c8n\u026ab\u0259l"
+    }
+  },
+  "dazed": {
+    "status": "created",
+    "result": {
+      "meaning": "very confused and unable to think clearly",
+      "example": "He had a dazed [=stunned] look on his face.",
+      "ipa": "\u02c8de\u026azd"
+    }
+  },
+  "glare": {
+    "status": "created",
+    "result": {
+      "meaning": "a long, angry look",
+      "example": "The white snow glared in the morning sunlight.",
+      "ipa": "\u02c8gle\u025a"
+    }
+  },
+  "perch": {
+    "status": "created",
+    "result": {
+      "meaning": "to sit on or be on something high or on something from which it is easy to fall",
+      "example": "Birds often perch on the ledge outside my window.",
+      "ipa": "\u02c8p\u025at\u0283"
+    }
+  },
+  "shore": {
+    "status": "created",
+    "result": {
+      "meaning": "the land along the edge of an area of water (such as an ocean, lake, etc.)",
+      "example": "The boat hugged the shore. [=stayed close to the shore]",
+      "ipa": "\u02c8\u0283o\u025a"
+    }
+  },
+  "cliff": {
+    "status": "created",
+    "result": {
+      "meaning": "a high, steep surface of rock, earth, or ice",
+      "example": "rock climbers scaling steep cliffs",
+      "ipa": "\u02c8kl\u026af"
     }
   }
 }

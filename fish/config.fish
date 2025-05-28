@@ -5,5 +5,14 @@ end
 set -Ux PYENV_ROOT $HOME/.pyenv
 fish_add_path $PYENV_ROOT/bin
 
+fish_add_path $HOME/.local/bin
+
 starship init fish | source
 pyenv init - fish | source
+
+# pnpm
+set -gx PNPM_HOME "/home/julio/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
