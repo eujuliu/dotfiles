@@ -1281,5 +1281,241 @@
       "example": "rock climbers scaling steep cliffs",
       "ipa": "\u02c8kl\u026af"
     }
+  },
+  "ought": {
+    "status": "created",
+    "result": {
+      "meaning": "to have (information of some kind) in your mind",
+      "example": "They ought to be here by now.",
+      "ipa": "\u02c8\u0251\u02d0t"
+    }
+  },
+  "velvety": {
+    "status": "created",
+    "result": {
+      "meaning": "soft and smooth",
+      "example": "velvety hair",
+      "ipa": "\u02c8v\u025blv\u0259ti"
+    }
+  },
+  "frayed": {
+    "status": "created",
+    "result": {
+      "meaning": "with the threads at the edge coming loose",
+      "example": "She frayed the edges of her cutoff jeans. = She frayed her cutoff jeans at the edges.",
+      "ipa": "\u02c8fre\u026a"
+    }
+  },
+  "sleek": {
+    "status": "created",
+    "result": {
+      "meaning": "straight and smooth in design or shape",
+      "example": "a sleek, modern building",
+      "ipa": "\u02c8sli\u02d0k"
+    }
+  },
+  "dwell": {
+    "status": "error",
+    "error": "CUDA out of memory. Tried to allocate 18.00 MiB. GPU 0 has a total capacity of 5.61 GiB of which 62.50 MiB is free. Process 8933 has 66.00 MiB memory in use. Process 8959 has 4.10 GiB memory in use. Process 2183 has 28.27 MiB memory in use. Process 40271 has 34.27 MiB memory in use. Including non-PyTorch memory, this process has 746.00 MiB memory in use. Of the allocated memory 594.07 MiB is allocated by PyTorch, and 55.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+  },
+  "daring": {
+    "status": "created",
+    "result": {
+      "meaning": "willing to do dangerous or difficult things",
+      "example": "She's a daring innovator in the field of biotechnology.",
+      "ipa": "\u02c8der\u026a\u014b"
+    }
+  },
+  "queasy": {
+    "status": "created",
+    "result": {
+      "meaning": "feeling that you want to vomit",
+      "example": "a queasy sensation",
+      "ipa": "\u02c8kwi\u02d0zi"
+    }
+  },
+  "merrily": {
+    "status": "created",
+    "result": {
+      "meaning": "very happy and cheerful feeling or showing joy and happiness",
+      "example": "merry laughter",
+      "ipa": "\u02c8meri"
+    }
+  },
+  "jog": {
+    "status": "created",
+    "result": {
+      "meaning": "to run slowly especially for exercise",
+      "example": "She jogs three miles a day.",
+      "ipa": "\u02c8\u02a4\u0251\u02d0g"
+    }
+  },
+  "amid": {
+    "status": "created",
+    "result": {
+      "meaning": "in or into the middle of (something)",
+      "example": "There was a single dark bird amid a flock of white pigeons.",
+      "ipa": "\u0259\u02c8m\u026ad"
+    }
+  },
+  "barely": {
+    "status": "created",
+    "result": {
+      "meaning": "hardly or scarcely",
+      "example": "I barely recognized you with your hair cut short.",
+      "ipa": "\u02c8be\u025ali"
+    }
+  },
+  "airily": {
+    "status": "created",
+    "result": {
+      "meaning": "having a lot of open space through which air can move freely",
+      "example": "an airy restaurant",
+      "ipa": "\u02c8eri"
+    }
+  },
+  "starved": {
+    "status": "created",
+    "result": {
+      "meaning": "to suffer or die from lack of food to suffer extreme hunger",
+      "example": "The famine caused many to starve to death. [=to die from lack of food]",
+      "ipa": "\u02c8st\u0251\u025av"
+    }
+  },
+  "cough": {
+    "status": "created",
+    "result": {
+      "meaning": "to force air through your throat with a short, loud noise often because you are sick",
+      "example": "The dust made him cough.",
+      "ipa": "\u02c8k\u0251\u02d0f"
+    }
+  },
+  "unbearable": {
+    "status": "created",
+    "result": {
+      "meaning": "too painful or unpleasant for you to continue to experience",
+      "example": "We were in an almost unbearable state of excitement.",
+      "ipa": "\u02cc\u028cn\u02c8ber\u0259b\u0259l"
+    }
+  },
+  "gaunt": {
+    "status": "created",
+    "result": {
+      "meaning": "very thin usually because of illness or suffering",
+      "example": "He left the hospital looking tired and gaunt.",
+      "ipa": "\u02c8g\u0251\u02d0nt"
+    }
+  },
+  "hooked": {
+    "status": "created",
+    "result": {
+      "meaning": "enjoying something so much that you are unable to stop having it, watching it, doing it, etc.",
+      "example": "the bird's hooked beak",
+      "ipa": "\u02c8h\u028akt"
+    }
+  },
+  "frown": {
+    "status": "created",
+    "result": {
+      "meaning": "a serious facial expression that usually shows anger, displeasure, or concentration",
+      "example": "She was wearing a frown. [=she was frowning]",
+      "ipa": "\u02c8fra\u028an"
+    }
+  },
+  "bare": {
+    "status": "created",
+    "result": {
+      "meaning": "not having a covering",
+      "example": "Do not let the bare wires touch.",
+      "ipa": "\u02c8be\u025a"
+    }
+  },
+  "tear": {
+    "status": "created",
+    "result": {
+      "meaning": "to separate (something) into parts by pulling it, cutting it, etc. to rip, split, or open (something) quickly or violently",
+      "example": "The dog tore the pillow to pieces/shreds.",
+      "ipa": "\u02c8te\u025a"
+    }
+  },
+  "scrawl": {
+    "status": "created",
+    "result": {
+      "meaning": "to write or draw (something) very quickly or carelessly",
+      "example": "She scrawled her signature on the receipt.",
+      "ipa": "\u02c8skr\u0251\u02d0l"
+    }
+  },
+  "borrow": {
+    "status": "created",
+    "result": {
+      "meaning": "to take and use (something that belongs to someone else) for a period of time before returning it",
+      "example": "He borrowed the book from the library.",
+      "ipa": "\u02c8b\u0251ro\u028a"
+    }
+  },
+  "bother": {
+    "status": "created",
+    "result": {
+      "meaning": "to cause (someone) to feel troubled, worried, or concerned",
+      "example": "Something he said at the meeting has been bothering me.",
+      "ipa": "\u02c8b\u0251\u02d0\u00f0\u025a"
+    }
+  },
+  "shimmer": {
+    "status": "created",
+    "result": {
+      "meaning": "to shine with a light that seems to move slightly",
+      "example": "shimmering colors/light",
+      "ipa": "\u02c8\u0283\u026am\u025a"
+    }
+  },
+  "simmer": {
+    "status": "created",
+    "result": {
+      "meaning": "to cook (something) so that it is almost boiling for a certain period of time",
+      "example": "The chicken was simmered in a cream sauce.",
+      "ipa": "\u02c8s\u026am\u025a"
+    }
+  },
+  "ensnare": {
+    "status": "created",
+    "result": {
+      "meaning": "to catch (an animal or person) in a trap or in a place from which there is no escape",
+      "example": "The police successfully ensnared the burglar.",
+      "ipa": "\u026an\u02c8sne\u025a"
+    }
+  },
+  "whimper": {
+    "status": "created",
+    "result": {
+      "meaning": "to make a quiet crying sound",
+      "example": "I could hear the puppy whimpering.",
+      "ipa": "\u02c8w\u026amp\u025a"
+    }
+  },
+  "pretend": {
+    "status": "created",
+    "result": {
+      "meaning": "to act as if something is true when it is not true",
+      "example": "(formal) He was pretending an emotion he really couldn't feel.",
+      "ipa": "pr\u026a\u02c8t\u025bnd"
+    }
+  },
+  "deceive": {
+    "status": "created",
+    "result": {
+      "meaning": "to make (someone) believe something that is not true",
+      "example": "It's no use deceiving ourselves into thinking [=it will not be helpful if we pretend] that everything will be fine.",
+      "ipa": "d\u026a\u02c8si\u02d0v"
+    }
+  },
+  "rid": {
+    "status": "created",
+    "result": {
+      "meaning": "to sit on and control the movements of (a horse, motorcycle, bicycle, etc.)",
+      "example": "He rides his motorcycle to work every day.",
+      "ipa": "\u02c8r\u026ad"
+    }
   }
 }

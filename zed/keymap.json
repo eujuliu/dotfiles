@@ -16,6 +16,14 @@
     "context": "Editor",
     "bindings": {
       // "j k": ["workspace::SendKeystrokes", "escape"]
+      "f1": [
+        "task::Spawn",
+        { "task_name": "File Finder", "reveal_target": "center" }
+      ],
+      "f2": [
+        "task::Spawn",
+        { "task_name": "Find in Files", "reveal_target": "center" }
+      ]
     }
   },
   {
