@@ -26,6 +26,7 @@
       "provider": "copilot_chat",
       "model": "gpt-4.1"
     },
+    "version": "2"
   },
   "tab_size": 2,
   "format_on_save": "prettier",
