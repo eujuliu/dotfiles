@@ -20,20 +20,24 @@
     "edit_prediction_provider": "zed"
   },
   "agent": {
+    "always_allow_tool_actions": true,
     "default_profile": "ask",
     "model_parameters": [],
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
-    },
+      "model": "grok-code-fast-1"
+    }
   },
   "tab_size": 2,
-  "format_on_save": "prettier",
+  "format_on_save": "on",
   "base_keymap": "VSCode",
   "ui_font_size": 14,
   "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 16,
+  "buffer_font_features": {
+    "calt": true
+  },
   "terminal": {
     "font_size": 14,
     "font_family": "JetBrainsMono Nerd Font",
@@ -46,5 +50,7 @@
     "light": "Min Light (Solid)",
     "dark": "Min Dark (Solid)"
   },
-  "icon_theme": "JetBrains New UI Icons (Dark)"
+  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "show_wrap_guides": true,
+  "wrap_guides": [100]
 }
