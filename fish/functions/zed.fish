@@ -1,4 +1,4 @@
-function zed --wraps=/usr/bin/zeditor --description 'alias zed=/usr/bin/zeditor'
-  /usr/bin/zeditor $argv
+function zed --wraps=~/.local/bin/zed --description 'alias zed=~/.local/bin/zed'
+  ~/.local/bin/zed $argv
         
 end
