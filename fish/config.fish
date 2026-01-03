@@ -17,3 +17,5 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
+alias vi "nvim"
+alias tt "taskwarrior-tui"

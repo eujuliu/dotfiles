@@ -12,21 +12,21 @@
     "mode": "subtle",
     "copilot": {
       "proxy": null,
-      "proxy_no_verify": null
+      "proxy_no_verify": null,
     },
-    "enabled_in_text_threads": false
+    "enabled_in_text_threads": false,
   },
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "zed",
   },
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "ask",
+    "default_profile": "write",
     "model_parameters": [],
     "default_model": {
       "provider": "copilot_chat",
-      "model": "grok-code-fast-1"
-    }
+      "model": "gemini-3-flash-preview",
+    },
   },
   "tab_size": 2,
   "format_on_save": "on",
@@ -36,21 +36,21 @@
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 16,
   "buffer_font_features": {
-    "calt": true
+    "calt": true,
   },
   "terminal": {
     "font_size": 14,
     "font_family": "JetBrainsMono Nerd Font",
     "shell": {
-      "program": "fish"
-    }
+      "program": "fish",
+    },
   },
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
-    "dark": "Min Dark (Solid)"
+    "dark": "Min Dark (Solid)",
   },
   "icon_theme": "Symbols Icon Theme",
   "show_wrap_guides": true,
-  "wrap_guides": [100]
+  "wrap_guides": [100],
 }
