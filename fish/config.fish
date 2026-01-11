@@ -2,20 +2,32 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-fish_add_path $HOME/.local/bin
-
-set -x GOPATH $HOME/go
-set -x PATH $PATH $GOPATH/bin
-set -x LIBVIRT_DEFAULT_URI "qemu:///system"
-
-starship init fish | source
-
 # pnpm
 set -gx PNPM_HOME "/home/julio/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
-# pnpm end
 
-alias vi "nvim"
-alias tt "taskwarrior-tui"
+set -gx LIBVIRT_DEFAULT_URI "qemu:///system"
+set -gx EDITOR nvim
+
+set -gx PATH bin $PATH
+set -gx PATH ~/bin $PATH
+set -gx PATH ~/.local/bin $PATH
+set -gx JAVA_HOME /usr/lib/jvm/default
+
+# NodeJS
+set -gx PATH node_modules/.bin $PATH
+
+# Go
+set -g GOPATH $HOME/go
+set -gx PATH $GOPATH/bin $PATH
+
+# Aliases
+alias vi nvim
+alias tt taskwarrior-tui
+
+# opencode
+fish_add_path /home/julio/.opencode/bin
+
+starship init fish | source

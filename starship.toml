@@ -1,3 +1,7 @@
 [character]
 success_symbol = '[➜](bold green) '
 error_symbol = '[➜](bold green) '
+
+[custom.jail]
+when = 'test "$JAIL" = "1"'
+format = "in [jail](bold red) "

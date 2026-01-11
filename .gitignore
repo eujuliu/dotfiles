@@ -17,3 +17,9 @@
 !television/**
 !github_issue_templates
 !github_issue_templates/**
+!tmux
+!tmux/**
+!nvim
+!nvim/**
+!scripts
+!scripts/**

@@ -1,0 +1,45 @@
+#!/bin/bash
+
+PROJECT_DIR=$(pwd)
+REAL_HOME_CONFIG="$HOME/.config"
+SPARSE_HOME=$(mktemp -d /tmp/bwrap-home.XXXXXX)
+
+# Ensure the temp home is cleaned up on exit
+trap 'rm -rf "$SPARSE_HOME"' EXIT
+
+# Create a place for the config to live inside the sparse home
+mkdir -p "$SPARSE_HOME/.config"
+
+# Go tools (such as Crush) will need this to resolve localhost
+TEMP_HOSTS=$(mktemp)
+echo "127.0.0.1 localhost" > "$TEMP_HOSTS"
+echo "::1       localhost" >> "$TEMP_HOSTS"
+
+echo "🛡️  Jail active: $PROJECT_DIR"
+
+bwrap \
+  --ro-bind /usr /usr \
+  --ro-bind /bin /bin \
+  --ro-bind /lib /lib \
+  --ro-bind /lib64 /lib64 \
+  --ro-bind /etc/resolv.conf /etc/resolv.conf \
+  --ro-bind /etc/ssl /etc/ssl \
+  --ro-bind "$TEMP_HOSTS" /etc/hosts \
+  --dev /dev \
+  --proc /proc \
+  --tmpfs /tmp \
+  --tmpfs /run \
+  --bind "$SPARSE_HOME" "$HOME" \
+  --ro-bind "$REAL_HOME_CONFIG" "$HOME/.config" \
+  --bind "$PROJECT_DIR" "$PROJECT_DIR" \
+  --chdir "$PROJECT_DIR" \
+  --unshare-user \
+  --unshare-ipc \
+  --unshare-pid \
+  --unshare-uts \
+  --unshare-cgroup \
+  --share-net \
+  --die-with-parent \
+  --hostname "ai-sandbox" \
+  --setenv PS1 "(jail) \w \$ " \
+  "${@:-bash}"
