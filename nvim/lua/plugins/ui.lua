@@ -64,19 +64,19 @@ return {
     "snacks.nvim",
     opts = {
       gh = {},
-      scroll = { enabled = false },
-      picker = {
+      explorer = {
         hidden = true,
         ignored = true,
+      },
+      image = {},
+      scroll = { enabled = false },
+      picker = {
         sources = {
           gh_issues = {},
           gh_pr = {},
-          files = {
+          explorer = {
             hidden = true,
             ignored = true,
-            exclude = {
-              "**/.git/*",
-            },
           },
         },
       },

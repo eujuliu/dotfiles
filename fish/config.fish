@@ -26,6 +26,8 @@ set -gx PATH $GOPATH/bin $PATH
 # Aliases
 alias vi nvim
 alias tt taskwarrior-tui
+alias jail ~/.config/scripts/ai-jail
+alias oc "jail opencode"
 
 # opencode
 fish_add_path /home/julio/.opencode/bin
