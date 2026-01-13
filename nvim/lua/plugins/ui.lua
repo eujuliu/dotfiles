@@ -61,7 +61,10 @@ return {
   },
 
   {
-    "snacks.nvim",
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    ---@type snacks.Config
     opts = {
       gh = {},
       explorer = {
@@ -77,6 +80,11 @@ return {
           explorer = {
             hidden = true,
             ignored = true,
+            layout = {
+              layout = {
+                width = 25,
+              },
+            },
           },
         },
       },
@@ -124,7 +132,6 @@ return {
     opts = {
       options = {
         mode = "tabs",
-        -- separator_style = "slant",
         show_buffer_close_icons = false,
         show_close_icon = false,
       },
