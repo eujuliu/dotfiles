@@ -12,8 +12,8 @@ mkdir -p "$SPARSE_HOME/.config"
 
 # Go tools (such as Crush) will need this to resolve localhost
 TEMP_HOSTS=$(mktemp)
-echo "127.0.0.1 localhost" > "$TEMP_HOSTS"
-echo "::1       localhost" >> "$TEMP_HOSTS"
+echo "127.0.0.1 localhost" >"$TEMP_HOSTS"
+echo "::1       localhost" >>"$TEMP_HOSTS"
 
 echo "🛡️  Jail active: $PROJECT_DIR"
 
@@ -30,6 +30,7 @@ bwrap \
   --tmpfs /tmp \
   --tmpfs /run \
   --bind "$SPARSE_HOME" "$HOME" \
+  --ro-bind "$HOME/.opencode" "$HOME/.opencode" \
   --ro-bind "$REAL_HOME_CONFIG" "$HOME/.config" \
   --bind "$PROJECT_DIR" "$PROJECT_DIR" \
   --chdir "$PROJECT_DIR" \
