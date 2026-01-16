@@ -31,6 +31,7 @@ bwrap \
   --tmpfs /run \
   --bind "$SPARSE_HOME" "$HOME" \
   --ro-bind "$HOME/.opencode" "$HOME/.opencode" \
+  --bind "$HOME/.local/share/opencode" "$HOME/.local/share/opencode" \
   --ro-bind "$REAL_HOME_CONFIG" "$HOME/.config" \
   --bind "$PROJECT_DIR" "$PROJECT_DIR" \
   --chdir "$PROJECT_DIR" \
