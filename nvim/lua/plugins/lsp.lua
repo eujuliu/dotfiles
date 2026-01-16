@@ -8,9 +8,8 @@ return {
         "luacheck",
         "shellcheck",
         "shfmt",
-        "tailwindcss-language-server",
-        "typescript-language-server",
         "css-lsp",
+        "biome",
       })
     end,
   },
@@ -56,8 +55,8 @@ return {
               inlayHints = {
                 enumMemberValues = { enabled = true },
                 functionLikeReturnTypes = { enabled = true },
-                parameterNames = { enabled = "literals" },
-                parameterTypes = { enabled = true },
+                parameterNames = { enabled = false },
+                parameterTypes = { enabled = false },
                 propertyDeclarationTypes = { enabled = true },
                 variableTypes = { enabled = false },
               },

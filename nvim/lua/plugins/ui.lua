@@ -68,21 +68,11 @@ return {
     opts = {
       gh = {},
       explorer = {
-        hidden = true,
+        hidden = false,
         ignored = true,
       },
       image = {},
       scroll = { enabled = false },
-      picker = {
-        sources = {
-          gh_issues = {},
-          gh_pr = {},
-          explorer = {
-            hidden = true,
-            ignored = true,
-          },
-        },
-      },
     },
     keys = {
       {
