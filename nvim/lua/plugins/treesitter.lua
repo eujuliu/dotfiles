@@ -1,138 +1,200 @@
 ---@module "lazy"
 ---@type LazySpec
 return {
-  "nvim-treesitter/nvim-treesitter",
-  dependencies = {
-    {
-      "nvim-treesitter/nvim-treesitter-context",
-      opts = {
-        max_lines = 4,
-        multiline_threshold = 2,
+  {
+    "nvim-treesitter/nvim-treesitter",
+    lazy = false,
+    build = ":TSUpdate",
+    branch = "main",
+    dependencies = {
+      {
+        "nvim-treesitter/nvim-treesitter-context",
+        opts = {
+          max_lines = 4,
+          multiline_threshold = 2,
+        },
       },
     },
-  },
-  lazy = false,
-  branch = "main",
-  build = ":TSUpdate",
-  config = function()
-    local ts = require("nvim-treesitter")
+    config = function()
+      local ts = require("nvim-treesitter")
+      local parsers = {
+        "angular",
+        "bash",
+        "comment",
+        "css",
+        "scss",
+        "diff",
+        "dockerfile",
+        "elixir",
+        "git_config",
+        "gitcommit",
+        "gitignore",
+        "groovy",
+        "go",
+        "heex",
+        "hcl",
+        "html",
+        "http",
+        "java",
+        "javascript",
+        "jsdoc",
+        "json",
+        "json5",
+        "jsonc",
+        "lua",
+        "make",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "regex",
+        "rst",
+        "rust",
+        "scss",
+        "ssh_config",
+        "sql",
+        "terraform",
+        "typst",
+        "toml",
+        "tsx",
+        "typescript",
+        "vim",
+        "vimdoc",
+        "yaml",
+      }
 
-    -- State tracking for async parser loading
-    local parsers_loaded = {}
-    local parsers_pending = {}
-    local parsers_failed = {}
-
-    local ns = vim.api.nvim_create_namespace("treesitter.async")
-
-    -- Helper to start highlighting and indentation
-    local function start(buf, lang)
-      local ok = pcall(vim.treesitter.start, buf, lang)
-      if ok then
-        vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      for _, parser in ipairs(parsers) do
+        ts.install(parser)
       end
-      return ok
-    end
 
-    -- Install core parsers after lazy.nvim finishes loading all plugins
-    vim.api.nvim_create_autocmd("User", {
-      pattern = "LazyDone",
-      once = true,
-      callback = function()
-        ts.install({
-          "bash",
-          "comment",
-          "css",
-          "diff",
-          "fish",
-          "git_config",
-          "git_rebase",
-          "gitcommit",
-          "gitignore",
-          "html",
-          "javascript",
-          "json",
-          "latex",
-          "lua",
-          "luadoc",
-          "make",
-          "markdown",
-          "markdown_inline",
-          "python",
-          "query",
-          "regex",
-          "scss",
-          "svelte",
-          "toml",
-          "tsx",
-          "typescript",
-          "typst",
-          "vim",
-          "vimdoc",
-          "vue",
-          "xml",
-        }, {
-          max_jobs = 8,
-        })
-      end,
-    })
+      vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+      vim.wo[0][0].foldmethod = "expr"
+      vim.api.nvim_command("set nofoldenable")
 
-    -- Decoration provider for async parser loading
-    vim.api.nvim_set_decoration_provider(ns, {
-      on_start = vim.schedule_wrap(function()
-        if #parsers_pending == 0 then
-          return false
-        end
-        for _, data in ipairs(parsers_pending) do
-          if vim.api.nvim_buf_is_valid(data.buf) then
-            if start(data.buf, data.lang) then
-              parsers_loaded[data.lang] = true
-            else
-              parsers_failed[data.lang] = true
-            end
-          end
-        end
-        parsers_pending = {}
-      end),
-    })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = parsers,
+        callback = function()
+          vim.treesitter.start()
+        end,
+      })
+    end,
+  },
 
-    local group = vim.api.nvim_create_augroup("TreesitterSetup", { clear = true })
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    branch = "main",
+    dependencies = { "nvim-treesitter/nvim-treesitter", branch = "main" },
+    init = function()
+      vim.g.no_plugin_maps = true
+    end,
+    config = function()
+      require("nvim-treesitter-textobjects").setup({
+        select = {
+          -- Automatically jump forward to textobj, similar to targets.vim
+          lookahead = true,
+          -- You can choose the select mode (default is charwise 'v')
 
-    local ignore_filetypes = {
-      "checkhealth",
-      "lazy",
-      "mason",
-      "snacks_dashboard",
-      "snacks_notif",
-      "snacks_win",
-    }
+          selection_modes = {
+            ["@parameter.outer"] = "v", -- charwise
+            ["@function.outer"] = "V", -- linewise
+            ["@class.outer"] = "<c-v>", -- blockwise
+          },
+          include_surrounding_whitespace = false,
+        },
+        move = {
+          -- whether to set jumps in the jumplist
+          set_jumps = true,
+        },
+      })
 
-    -- Auto-install parsers and enable highlighting on FileType
-    vim.api.nvim_create_autocmd("FileType", {
-      group = group,
-      desc = "Enable treesitter highlighting and indentation (non-blocking)",
-      callback = function(event)
-        if vim.tbl_contains(ignore_filetypes, event.match) then
-          return
-        end
+      -- Selects
+      local select = require("nvim-treesitter-textobjects.select")
+      vim.keymap.set({ "x", "o" }, "am", function()
+        select.select_textobject("@function.outer", "textobjects")
+      end)
+      vim.keymap.set({ "x", "o" }, "im", function()
+        select.select_textobject("@function.inner", "textobjects")
+      end)
+      vim.keymap.set({ "x", "o" }, "ac", function()
+        select.select_textobject("@class.outer", "textobjects")
+      end)
+      vim.keymap.set({ "x", "o" }, "ic", function()
+        select.select_textobject("@class.inner", "textobjects")
+      end)
+      -- You can also use captures from other query groups like `locals.scm`
+      vim.keymap.set({ "x", "o" }, "as", function()
+        select.select_textobject("@local.scope", "locals")
+      end)
 
-        local lang = vim.treesitter.language.get_lang(event.match) or event.match
-        local buf = event.buf
+      -- Swaps
+      local swap = require("nvim-treesitter-textobjects.swap")
+      vim.keymap.set("n", "<leader>a", function()
+        swap.swap_next("@parameter.inner")
+      end)
+      vim.keymap.set("n", "<leader>A", function()
+        swap.swap_previous("@parameter.outer")
+      end)
 
-        if parsers_failed[lang] then
-          return
-        end
+      local move = require("nvim-treesitter-textobjects.move")
+      vim.keymap.set({ "n", "x", "o" }, "]m", function()
+        move.goto_next_start("@function.outer", "textobjects")
+      end)
+      vim.keymap.set({ "n", "x", "o" }, "]]", function()
+        move.goto_next_start("@class.outer", "textobjects")
+      end)
+      -- You can also pass a list to group multiple queries.
+      vim.keymap.set({ "n", "x", "o" }, "]o", function()
+        move.goto_next_start({ "@loop.inner", "@loop.outer" }, "textobjects")
+      end)
+      -- You can also use captures from other query groups like `locals.scm` or `folds.scm`
+      vim.keymap.set({ "n", "x", "o" }, "]s", function()
+        move.goto_next_start("@local.scope", "locals")
+      end)
+      vim.keymap.set({ "n", "x", "o" }, "]z", function()
+        move.goto_next_start("@fold", "folds")
+      end)
 
-        if parsers_loaded[lang] then
-          -- Parser already loaded, start immediately (fast path)
-          start(buf, lang)
-        else
-          -- Queue for async loading
-          table.insert(parsers_pending, { buf = buf, lang = lang })
-        end
+      vim.keymap.set({ "n", "x", "o" }, "]M", function()
+        move.goto_next_end("@function.outer", "textobjects")
+      end)
+      vim.keymap.set({ "n", "x", "o" }, "][", function()
+        move.goto_next_end("@class.outer", "textobjects")
+      end)
 
-        -- Auto-install missing parsers (async, no-op if already installed)
-        ts.install({ lang })
-      end,
-    })
-  end,
+      vim.keymap.set({ "n", "x", "o" }, "[m", function()
+        move.goto_previous_start("@function.outer", "textobjects")
+      end)
+      vim.keymap.set({ "n", "x", "o" }, "[[", function()
+        move.goto_previous_start("@class.outer", "textobjects")
+      end)
+
+      vim.keymap.set({ "n", "x", "o" }, "[M", function()
+        move.goto_previous_end("@function.outer", "textobjects")
+      end)
+      vim.keymap.set({ "n", "x", "o" }, "[]", function()
+        move.goto_previous_end("@class.outer", "textobjects")
+      end)
+
+      -- Go to either the start or the end, whichever is closer.
+      -- Use if you want more granular movements
+      vim.keymap.set({ "n", "x", "o" }, "]d", function()
+        move.goto_next("@conditional.outer", "textobjects")
+      end)
+      vim.keymap.set({ "n", "x", "o" }, "[d", function()
+        move.goto_previous("@conditional.outer", "textobjects")
+      end)
+
+      local ts_repeat_move = require("nvim-treesitter-textobjects.repeatable_move")
+
+      -- Repeat movement with ; and ,
+      -- ensure ; goes forward and , goes backward regardless of the last direction
+      vim.keymap.set({ "n", "x", "o" }, ";", ts_repeat_move.repeat_last_move_next)
+      vim.keymap.set({ "n", "x", "o" }, ",", ts_repeat_move.repeat_last_move_previous)
+
+      -- Optionally, make builtin f, F, t, T also repeatable with ; and ,
+      vim.keymap.set({ "n", "x", "o" }, "f", ts_repeat_move.builtin_f_expr, { expr = true })
+      vim.keymap.set({ "n", "x", "o" }, "F", ts_repeat_move.builtin_F_expr, { expr = true })
+      vim.keymap.set({ "n", "x", "o" }, "t", ts_repeat_move.builtin_t_expr, { expr = true })
+      vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T_expr, { expr = true })
+    end,
+  },
 }

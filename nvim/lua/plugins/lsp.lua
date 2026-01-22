@@ -1,16 +1,28 @@
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 return {
   {
     "mason-org/mason.nvim",
     opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, {
+      local values = {
+        "js-debug-adapter",
+        "biome",
         "stylua",
         "selene",
         "luacheck",
         "shellcheck",
         "shfmt",
+        "tailwindcss-language-server",
         "css-lsp",
-        "biome",
-      })
+      }
+
+      opts.ensure_installed = opts.ensure_installed or {}
+
+      for _, value in ipairs(values) do
+        table.insert(opts.ensure_installed, value)
+      end
     end,
   },
 
@@ -24,9 +36,8 @@ return {
         ts_ls = {
           enabled = false,
         },
+        angularls = {},
         vtsls = {
-          -- explicitly add default filetypes, so that we can extend
-          -- them in related extras
           filetypes = {
             "javascript",
             "javascriptreact",
@@ -54,85 +65,65 @@ return {
               },
               inlayHints = {
                 enumMemberValues = { enabled = true },
-                functionLikeReturnTypes = { enabled = true },
+                functionLikeReturnTypes = { enabled = false },
                 parameterNames = { enabled = false },
                 parameterTypes = { enabled = false },
-                propertyDeclarationTypes = { enabled = true },
+                propertyDeclarationTypes = { enabled = false },
                 variableTypes = { enabled = false },
               },
             },
           },
-        },
-        html = {},
-        yamlls = {
-          settings = {
-            yaml = {
-              keyOrdering = false,
+          keys = {
+            {
+              "gD",
+              function()
+                local win = vim.api.nvim_get_current_win()
+                local params = vim.lsp.util.make_position_params(win, "utf-16")
+                LazyVim.lsp.execute({
+                  command = "typescript.goToSourceDefinition",
+                  arguments = { params.textDocument.uri, params.position },
+                  open = true,
+                })
+              end,
+              desc = "Goto Source Definition",
             },
-          },
-        },
-        lua_ls = {
-          -- enabled = false,
-          single_file_support = true,
-          settings = {
-            Lua = {
-              workspace = {
-                checkThirdParty = false,
-              },
-              completion = {
-                workspaceWord = true,
-                callSnippet = "Both",
-              },
-              misc = {
-                parameters = {
-                  -- "--log-level=trace",
-                },
-              },
-              hint = {
-                enable = true,
-                setType = false,
-                paramType = true,
-                paramName = "Disable",
-                semicolon = "Disable",
-                arrayIndex = "Disable",
-              },
-              doc = {
-                privateName = { "^_" },
-              },
-              type = {
-                castNumberToInteger = true,
-              },
-              diagnostics = {
-                disable = { "incomplete-signature-doc", "trailing-space" },
-                -- enable = false,
-                groupSeverity = {
-                  strong = "Warning",
-                  strict = "Warning",
-                },
-                groupFileStatus = {
-                  ["ambiguity"] = "Opened",
-                  ["await"] = "Opened",
-                  ["codestyle"] = "None",
-                  ["duplicate"] = "Opened",
-                  ["global"] = "Opened",
-                  ["luadoc"] = "Opened",
-                  ["redefined"] = "Opened",
-                  ["strict"] = "Opened",
-                  ["strong"] = "Opened",
-                  ["type-check"] = "Opened",
-                  ["unbalanced"] = "Opened",
-                  ["unused"] = "Opened",
-                },
-                unusedLocalExclude = { "_*" },
-              },
-              format = {
-                enable = false,
-                defaultConfig = {
-                  indent_style = "space",
-                  indent_size = "2",
-                  continuation_indent_size = "2",
-                },
-              },
+            {
+              "gR",
+              function()
+                LazyVim.lsp.execute({
+                  command = "typescript.findAllFileReferences",
+                  arguments = { vim.uri_from_bufnr(0) },
+                  open = true,
+                })
+              end,
+              desc = "File References",
+            },
+            {
+              "<leader>co",
+              LazyVim.lsp.action["source.organizeImports"],
+              desc = "Organize Imports",
+            },
+            {
+              "<leader>cM",
+              LazyVim.lsp.action["source.addMissingImports.ts"],
+              desc = "Add missing imports",
+            },
+            {
+              "<leader>cu",
+              LazyVim.lsp.action["source.removeUnused.ts"],
+              desc = "Remove unused imports",
+            },
+            {
+              "<leader>cD",
+              LazyVim.lsp.action["source.fixAll.ts"],
+              desc = "Fix all diagnostics",
+            },
+            {
+              "<leader>cV",
+              function()
+                LazyVim.lsp.execute({ command = "typescript.selectTypeScriptVersion" })
+              end,
+              desc = "Select TS workspace version",
             },
           },
         },
@@ -153,6 +144,21 @@ return {
         ts_ls = function()
           -- disable tsserver
           return true
+        end,
+        emmet_ls = {
+          filetypes = { "css", "eruby", "html", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact" },
+          capabilities = capabilities,
+          init_options = {
+            html = {
+              ["bem.enabled"] = true,
+            },
+          },
+        },
+        angularls = function()
+          Snacks.util.lsp.on({ name = "angularls" }, function(_, client)
+            --HACK: disable angular renaming capability due to duplicate rename popping up
+            client.server_capabilities.renameProvider = false
+          end)
         end,
         vtsls = function(_, opts)
           if vim.lsp.config.denols and vim.lsp.config.vtsls then

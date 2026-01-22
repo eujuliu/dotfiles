@@ -1,5 +1,4 @@
 return {
-  -- messages, cmdline and the popupmenu
   {
     "folke/noice.nvim",
     opts = function(_, opts)
@@ -33,7 +32,6 @@ return {
 
       opts.commands = {
         all = {
-          -- options for the message history that you get with `:Noice`
           view = "split",
           opts = { enter = true, format = "details" },
           filter = {},
@@ -126,7 +124,6 @@ return {
   -- filename
   {
     "b0o/incline.nvim",
-    dependencies = { "craftzdog/solarized-osaka.nvim" },
     event = "BufReadPre",
     priority = 1200,
     config = function()

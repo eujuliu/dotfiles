@@ -63,17 +63,6 @@ return {
         desc = "Find Plugin File",
       },
       {
-        ";f",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.find_files({
-            no_ignore = true,
-            hidden = true,
-          })
-        end,
-        desc = "Lists files in your current working directory, respects .gitignore",
-      },
-      {
         ";r",
         function()
           local builtin = require("telescope.builtin")
@@ -98,14 +87,6 @@ return {
           builtin.help_tags()
         end,
         desc = "Lists available help tags and opens a new window with the relevant help info on <cr>",
-      },
-      {
-        ";;",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.resume()
-        end,
-        desc = "Resume the previous telescope picker",
       },
       {
         ";e",
@@ -183,9 +164,7 @@ return {
           -- disables netrw and use telescope-file-browser in its place
           hijack_netrw = true,
           mappings = {
-            -- your custom insert mode mappings
             ["n"] = {
-              -- your custom normal mode mappings
               ["N"] = fb_actions.create,
               ["h"] = fb_actions.goto_parent_dir,
               ["/"] = function()
@@ -236,17 +215,67 @@ return {
 
   {
     "saghen/blink.cmp",
+    dependencies = { "rafamadriz/friendly-snippets" },
+
+    version = "1.*",
+    ---@module 'blink.cmp'
+    ---@type blink.cmp.Config
     opts = {
-      fuzzy = { implementation = "prefer_rust_with_warning" },
+      -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
+      -- 'super-tab' for mappings similar to vscode (tab to accept)
+      -- 'enter' for enter to accept
+      -- 'none' for no mappings
+      --
+      -- All presets have the following mappings:
+      -- C-space: Open menu or open docs if already open
+      -- C-n/C-p or Up/Down: Select next/previous item
+      -- C-e: Hide menu
+      -- C-k: Toggle signature help (if signature.enabled = true)
+      --
+      -- See :h blink-cmp-config-keymap for defining your own keymap
+      keymap = {
+        preset = "enter",
+      },
+
+      appearance = {
+        nerd_font_variant = "mono",
+      },
+
       completion = {
+        documentation = { auto_show = false },
         menu = {
           winblend = vim.o.pumblend,
         },
       },
+
       signature = {
         window = {
           winblend = vim.o.pumblend,
         },
+      },
+
+      sources = {
+        default = { "lsp", "path", "snippets", "buffer" },
+      },
+
+      fuzzy = { implementation = "prefer_rust_with_warning" },
+    },
+    opts_extend = { "sources.default" },
+  },
+
+  {
+    "nvim-mini/mini.icons",
+    opts = {
+      file = {
+        [".eslintrc.js"] = { glyph = "󰱺", hl = "MiniIconsYellow" },
+        [".node-version"] = { glyph = "", hl = "MiniIconsGreen" },
+        [".prettierrc"] = { glyph = "", hl = "MiniIconsPurple" },
+        [".yarnrc.yml"] = { glyph = "", hl = "MiniIconsBlue" },
+        ["eslint.config.js"] = { glyph = "󰱺", hl = "MiniIconsYellow" },
+        ["package.json"] = { glyph = "", hl = "MiniIconsGreen" },
+        ["tsconfig.json"] = { glyph = "", hl = "MiniIconsAzure" },
+        ["tsconfig.build.json"] = { glyph = "", hl = "MiniIconsAzure" },
+        ["yarn.lock"] = { glyph = "", hl = "MiniIconsBlue" },
       },
     },
   },

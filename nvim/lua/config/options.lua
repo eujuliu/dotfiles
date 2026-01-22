@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
+vim.opt.termguicolors = true
 
 vim.opt.number = true
 
@@ -31,6 +32,7 @@ vim.opt.splitbelow = true -- Put new windows below current
 vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
@@ -53,6 +55,7 @@ vim.filetype.add({
   },
 })
 
+vim.g.lazyvim_php_lsp = "intelephense"
 vim.g.lazyvim_prettier_needs_config = true
 vim.g.lazyvim_picker = "telescope"
 vim.g.lazyvim_cmp = "blink.cmp"
