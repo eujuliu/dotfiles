@@ -1,3 +1,8 @@
+local colors = {
+  bg = "#34343b",
+  fg = "#7b7b7b",
+}
+
 return {
   {
     "folke/noice.nvim",
@@ -163,19 +168,6 @@ return {
         }),
       }
     end,
-  },
-
-  {
-    "folke/zen-mode.nvim",
-    cmd = "ZenMode",
-    opts = {
-      plugins = {
-        gitsigns = true,
-        tmux = true,
-        kitty = { enabled = false, font = "+2" },
-      },
-    },
-    keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
 
   {

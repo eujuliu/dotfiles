@@ -193,27 +193,6 @@ return {
   },
 
   {
-    "kazhala/close-buffers.nvim",
-    event = "VeryLazy",
-    keys = {
-      {
-        "<leader>th",
-        function()
-          require("close_buffers").delete({ type = "hidden" })
-        end,
-        "Close Hidden Buffers",
-      },
-      {
-        "<leader>tu",
-        function()
-          require("close_buffers").delete({ type = "nameless" })
-        end,
-        "Close Nameless Buffers",
-      },
-    },
-  },
-
-  {
     "saghen/blink.cmp",
     dependencies = { "rafamadriz/friendly-snippets" },
 
@@ -234,7 +213,7 @@ return {
       --
       -- See :h blink-cmp-config-keymap for defining your own keymap
       keymap = {
-        preset = "enter",
+        preset = "default",
       },
 
       appearance = {

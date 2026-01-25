@@ -16,6 +16,8 @@ return {
         "shfmt",
         "tailwindcss-language-server",
         "css-lsp",
+        "phpcs",
+        "php-cs-fixer",
       }
 
       opts.ensure_installed = opts.ensure_installed or {}
@@ -36,6 +38,7 @@ return {
         ts_ls = {
           enabled = false,
         },
+        intelephense = {},
         angularls = {},
         vtsls = {
           filetypes = {

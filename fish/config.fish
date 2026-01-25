@@ -34,6 +34,6 @@ fish_add_path /home/julio/.opencode/bin
 
 starship init fish | source
 
-load_nvm >/dev/stderr
+# load_nvm >/dev/stderr
 
 fish_add_path /home/julio/.spicetify

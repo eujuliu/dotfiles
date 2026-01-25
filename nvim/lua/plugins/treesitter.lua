@@ -46,6 +46,7 @@ return {
         "markdown",
         "markdown_inline",
         "python",
+        "php",
         "regex",
         "rst",
         "rust",
