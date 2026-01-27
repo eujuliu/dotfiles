@@ -1,6 +1,6 @@
-accent: "#FF7A84"
-background: "#1f1f1f"
-foreground: "#f8f8f8"
+accent: "#b392f0"
+background: "#141414"
+foreground: "#BBB"
 details: "darker"
 terminal_colors:
   normal:
