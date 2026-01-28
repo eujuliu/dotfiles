@@ -28,3 +28,7 @@ keymap.set("n", "<C-w><left>", "<C-w><")
 keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
+
+-- Save with Ctrl + S
+keymap.set({ "n", "i", "v", "s" }, "<C-s>", "<cmd>w<cr>", { desc = "Save file" })
+
