@@ -30,5 +30,5 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Save with Ctrl + S
-keymap.set({ "n", "i", "v", "s" }, "<C-s>", "<cmd>w<cr>", { desc = "Save file" })
+keymap.set({ "n", "i", "v", "s" }, "<C-s>", "<Esc><cmd>w<cr>", { desc = "Save file and return to normal mode" })
 

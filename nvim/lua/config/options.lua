@@ -1,6 +1,7 @@
 local g = vim.g       -- Global variables
 local o = vim.o       -- Set options
 local opt = vim.opt   -- Set options (lua list/map-like)
+local cmd = vim.cmd
 
 -----------------------------------------------------------
 -- General
@@ -33,8 +34,8 @@ o.laststatus = 3          -- Set global statusline
 opt.scrolloff = 10        -- At least 10 lines above and below cursor
 
 -- Undercurl
-vim.cmd([[let &t_Cs = "\e[4:3m"]])
-vim.cmd([[let &t_Ce = "\e[4:0m"]])
+cmd([[let &t_Cs = "\e[4:3m"]])
+cmd([[let &t_Ce = "\e[4:0m"]])
 
 vim.diagnostic.config({ virtual_text = true }) -- Show inline diagnostics
 
