@@ -43,7 +43,6 @@ return {
           --   table.insert(acc, pack.spec.neovim and pack.spec.neovim.lspconfig)
           --   return acc
           -- end)
-
         end,
       },
       "neovim/nvim-lspconfig",
