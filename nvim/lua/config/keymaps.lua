@@ -31,18 +31,20 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Save with Ctrl + S
 keymap.set({ "n", "i", "v", "s" }, "<C-s>", function()
-  -- Always go back to normal mode
   vim.cmd("stopinsert")
 
-  -- Run Conform formatter (safe call)
   local ok, conform = pcall(require, "conform")
   if ok then
     conform.format({
-      async = false,       -- wait for formatting before saving
-      lsp_fallback = true, -- fallback to LSP if no formatter
+      async = false,
+      lsp_fallback = true,
     })
   end
 
-  -- Save only if buffer changed
   vim.cmd("update")
 end, { desc = "Format with Conform, save, and go to normal mode" })
+
+-- Clear search highlight
+keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>", {
+  desc = "Clear search highlight",
+})

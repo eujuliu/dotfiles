@@ -1,12 +1,12 @@
-local augroup = vim.api.nvim_create_augroup   -- Create/get autocommand group
-local autocmd = vim.api.nvim_create_autocmd   -- Create autocommand
+local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
+local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
 -- Highlight on yank
 augroup('YankHighlight', { clear = true })
 autocmd('TextYankPost', {
   group = 'YankHighlight',
   callback = function()
-    vim.highlight.on_yank({ higroup = 'IncSearch', timeout = '1000' })
+    vim.highlight.on_yank({ higroup = 'IncSearch', timeout = '500' })
   end
 })
 
@@ -49,8 +49,6 @@ autocmd("LspAttach", {
     map("n", "gI", vim.lsp.buf.implementation, "Goto Implementation")
     map("n", "gy", vim.lsp.buf.type_definition, "Goto Type Definition")
     map("n", "gD", vim.lsp.buf.declaration, "Goto Declaration")
-    map("n", "K", vim.lsp.buf.hover, "Hover")
-    map({ "n", "i" }, "<C-k>", vim.lsp.buf.signature_help, "Signature Help")
     map({ "n", "x" }, "<leader>ca", vim.lsp.buf.code_action, "Code Action")
     map("n", "<leader>cr", vim.lsp.buf.rename, "Rename")
 

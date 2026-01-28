@@ -3,7 +3,7 @@
  - Formatter OK
  - TeleScope OK
  - AutoComplete OK
- - Lint
+ - Lint NO
  - Diagnostics OK
 
 
