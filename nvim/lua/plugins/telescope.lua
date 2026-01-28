@@ -82,6 +82,11 @@ return {
       local actions = require("telescope.actions")
       local fb_actions = require("telescope").extensions.file_browser.actions
 
+      opts = opts or {}
+      opts.defaults = opts.defaults or {}
+      opts.pickers = opts.pickers or {}
+      opts.extensions = opts.extensions or {}
+
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
         wrap_results = true,
         layout_strategy = "horizontal",
@@ -124,6 +129,8 @@ return {
               end,
               ["<PageUp>"] = actions.preview_scrolling_up,
               ["<PageDown>"] = actions.preview_scrolling_down,
+              ["<C-k>"] = actions.preview_scrolling_up,
+              ["<C-j>"] = actions.preview_scrolling_down
             },
           },
         },
