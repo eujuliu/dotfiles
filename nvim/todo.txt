@@ -1,9 +1,10 @@
- - Configure LSP with https://www.reddit.com/r/neovim/comments/1p0a576/do_you_really_need_plugins_for_lsp/
- - TreeSitter
- - Formatter
- - TeleScope
+ - Configure LSP with https://www.reddit.com/r/neovim/comments/1p0a576/do_you_really_need_plugins_for_lsp/ OK
+ - TreeSitter OK
+ - Formatter OK
+ - TeleScope OK
+ - AutoComplete OK
  - Lint
- - Diagnostics
+ - Diagnostics OK
 
 
  https://www.khuedoan.com/posts/minimal-neovim-setup-from-scratch
