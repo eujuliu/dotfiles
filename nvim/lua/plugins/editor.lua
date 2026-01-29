@@ -1,5 +1,62 @@
 return {
   {
+    "nvim-mini/mini.move",
+    event = "VeryLazy",
+    opts = {},
+  },
+
+  {
+    "echasnovski/mini.bufremove",
+    version = false,
+    keys = {
+      { "<S-h>",      "<cmd>bprevious<cr>", desc = "Prev buffer" },
+      { "<S-l>",      "<cmd>bnext<cr>",     desc = "Next buffer" },
+
+      { "<leader>bb", "<C-^>",              desc = "Previous buffer" },
+      {
+        "<leader>bd",
+        function()
+          require("mini.bufremove").delete(0, false)
+        end,
+        desc = "Delete buffer",
+      },
+
+      {
+        "<leader>bD",
+        function()
+          require("mini.bufremove").delete(0, true)
+        end,
+        desc = "Delete buffer (force)",
+      },
+
+      {
+        "<leader>bo",
+        function()
+          local current = vim.api.nvim_get_current_buf()
+          for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+            if buf ~= current and vim.api.nvim_buf_is_loaded(buf) then
+              require("mini.bufremove").delete(buf, false)
+            end
+          end
+        end,
+        desc = "Close other buffers",
+      },
+
+      {
+        "<leader>ba",
+        function()
+          for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+            if vim.api.nvim_buf_is_loaded(buf) then
+              require("mini.bufremove").delete(buf, true)
+            end
+          end
+        end,
+        desc = "Close all buffers",
+      }
+    },
+  },
+
+  {
     "MagicDuck/grug-far.nvim",
     opts = { headerMaxWidth = 80 },
     cmd = { "GrugFar", "GrugFarWithin" },

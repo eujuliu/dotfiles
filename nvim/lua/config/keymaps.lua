@@ -45,6 +45,8 @@ keymap.set({ "n", "i", "v", "s" }, "<C-s>", function()
 end, { desc = "Format with Conform, save, and go to normal mode" })
 
 -- Clear search highlight
-keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>", {
-  desc = "Clear search highlight",
-})
+keymap.set("n", "<Esc>", function()
+  if vim.v.hlsearch == 1 then
+    vim.cmd("nohlsearch")
+  end
+end, { desc = "Clear search highlight" })

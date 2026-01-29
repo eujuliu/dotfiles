@@ -4,14 +4,14 @@ return {
     event = "VeryLazy",
     opts = {
       modes = { insert = true, command = true, terminal = false },
-      -- skip autopair when next character is one of these
+      -- Skip autopair when next character is one of these
       skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
-      -- skip autopair when the cursor is inside these treesitter nodes
+      -- Skip autopair when the cursor is inside these treesitter nodes
       skip_ts = { "string" },
-      -- skip autopair when next character is closing pair
+      -- Skip autopair when next character is closing pair
       -- and there are more closing pairs than opening pairs
       skip_unbalanced = true,
-      -- better deal with markdown code blocks
+      -- Better deal with Markdown code blocks
       markdown = true,
     },
   },
@@ -51,5 +51,24 @@ return {
         },
       }
     end,
+  },
+
+  {
+    "L3MON4D3/LuaSnip",
+    lazy = true,
+    build = "make install_jsregexp",
+    dependencies = {
+      {
+        "rafamadriz/friendly-snippets",
+        config = function()
+          require("luasnip.loaders.from_vscode").lazy_load()
+          require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.fn.stdpath("config") .. "/snippets" } })
+        end,
+      },
+    },
+    opts = {
+      history = true,
+      delete_check_events = "TextChanged",
+    },
   }
 }

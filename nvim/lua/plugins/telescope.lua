@@ -50,6 +50,10 @@ return {
             no_ignore = true,
             initial_mode = "normal",
             layout_config = { height = 40 },
+            exclude = {
+              "node_modules",
+              "%.git",
+            },
           })
         end,
         desc = "Open File Browser in current working directory",
@@ -72,6 +76,10 @@ return {
             no_ignore = true,
             initial_mode = "normal",
             layout_config = { height = 40 },
+            exclude = {
+              "node_modules",
+              "%.git",
+            },
           })
         end,
         desc = "Open File Browser in current buffer",
@@ -90,7 +98,7 @@ return {
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
         wrap_results = true,
         layout_strategy = "horizontal",
-        layout_config = { prompt_position = "top" },
+        layout_config = { prompt_position = "top", preview_width = 0.5 },
         sorting_strategy = "ascending",
         winblend = 0,
         mappings = {
@@ -118,19 +126,21 @@ return {
                 vim.cmd("startinsert")
               end,
               ["<C-u>"] = function(prompt_bufnr)
-                for i = 1, 10 do
+                for _ = 1, 10 do
                   actions.move_selection_previous(prompt_bufnr)
                 end
               end,
               ["<C-d>"] = function(prompt_bufnr)
-                for i = 1, 10 do
+                for _ = 1, 10 do
                   actions.move_selection_next(prompt_bufnr)
                 end
               end,
               ["<PageUp>"] = actions.preview_scrolling_up,
               ["<PageDown>"] = actions.preview_scrolling_down,
               ["<C-k>"] = actions.preview_scrolling_up,
-              ["<C-j>"] = actions.preview_scrolling_down
+              ["<C-j>"] = actions.preview_scrolling_down,
+              ["<C-h>"] = actions.preview_scrolling_left,
+              ["<C-l>"] = actions.preview_scrolling_right,
             },
           },
         },

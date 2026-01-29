@@ -21,7 +21,11 @@ return {
             "vtsls",
             "angular-language-server",
             "intelephense",
-            "emmet-ls"
+            "emmet-ls",
+            "harper-ls",
+            "superhtml",
+            "prettier",
+            "prettierd"
           },
         },
         keys = {
