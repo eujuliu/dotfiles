@@ -1,14 +1,24 @@
 return {
-	{
-		"datsfilipe/min-theme.nvim",
-		priority = 1000,
-		opts = {
-			transparent = true,
-		},
-		config = function(_, opts)
-			require("min-theme").setup(opts)
+  {
+    "datsfilipe/min-theme.nvim",
+    priority = 1000,
+    config = function()
+      local theme
 
-			vim.cmd("colorscheme min-theme")
-		end,
-	},
+      if vim.env.THEME == "prefer-dark" then
+        theme = "dark"
+      else
+        theme = "light"
+      end
+
+      vim.opt.background = theme
+
+      require("min-theme").setup({
+        theme = theme,
+        transparent = true,
+      })
+
+      vim.cmd.colorscheme("min-theme")
+    end,
+  },
 }

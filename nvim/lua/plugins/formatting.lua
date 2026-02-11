@@ -18,6 +18,14 @@ return {
         mode = { "n", "x" },
         desc = "Format Langs",
       },
+      {
+        "<leader>cB",
+        function()
+          require("conform").format({ timeout_ms = 3000, async = true, force = true })
+        end,
+        mode = { "n", "x" },
+        desc = "Format (Force)",
+      },
 
     },
     ---@type conform.setupOpts

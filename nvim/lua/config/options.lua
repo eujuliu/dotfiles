@@ -40,6 +40,35 @@ cmd([[let &t_Ce = "\e[4:0m"]])
 
 vim.diagnostic.config({ virtual_text = true }) -- Show inline diagnostics
 
+function _G.diagnostic_status()
+  local counts = vim.diagnostic.count(0)
+  local parts = {}
+
+  local icons = {
+    [vim.diagnostic.severity.ERROR] = "",
+    [vim.diagnostic.severity.WARN]  = "",
+  }
+
+  for severity, icon in pairs(icons) do
+    local n = counts[severity]
+    if n and n > 0 then
+      table.insert(parts, icon .. " " .. n)
+    end
+  end
+
+  return table.concat(parts, " ")
+end
+
+vim.opt.statusline = table.concat({
+  "%f",                           -- [path]
+  "%=",                           -- fill space
+  "%{v:lua.diagnostic_status()}", -- [diagnostics]
+  " | ",
+  "%l,%c",                        -- [ln,col]
+  " | ",
+  "%p%%",                         -- [percentage]
+})
+
 -----------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------

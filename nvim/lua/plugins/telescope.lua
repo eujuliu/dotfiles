@@ -7,6 +7,7 @@ return {
         build = "make",
       },
       "nvim-telescope/telescope-file-browser.nvim",
+      { "nvim-tree/nvim-web-devicons", opts = {} },
     },
     keys = {
       -- git
@@ -49,11 +50,7 @@ return {
             hidden = true,
             no_ignore = true,
             initial_mode = "normal",
-            layout_config = { height = 40 },
-            exclude = {
-              "node_modules",
-              "%.git",
-            },
+            -- layout_config = { height = 40 },
           })
         end,
         desc = "Open File Browser in current working directory",
@@ -75,11 +72,7 @@ return {
             hidden = true,
             no_ignore = true,
             initial_mode = "normal",
-            layout_config = { height = 40 },
-            exclude = {
-              "node_modules",
-              "%.git",
-            },
+            -- layout_config = { height = 40 },
           })
         end,
         desc = "Open File Browser in current buffer",
@@ -92,19 +85,24 @@ return {
 
       opts = opts or {}
       opts.defaults = opts.defaults or {}
-      opts.pickers = opts.pickers or {}
-      opts.extensions = opts.extensions or {}
 
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
+        file_ignore_patterns = {
+          "node_modules",
+          ".git"
+        },
         wrap_results = true,
         layout_strategy = "horizontal",
-        layout_config = { prompt_position = "top", preview_width = 0.5 },
+        layout_config = {
+          prompt_position = "top",
+          preview_width = 0.5,
+        },
         sorting_strategy = "ascending",
-        winblend = 0,
         mappings = {
           n = {},
         },
       })
+
       opts.pickers = {
         diagnostics = {
           theme = "ivy",
@@ -120,6 +118,7 @@ return {
           hijack_netrw = true,
           mappings = {
             ["n"] = {
+              ["q"] = actions.close,
               ["N"] = fb_actions.create,
               ["h"] = fb_actions.goto_parent_dir,
               ["/"] = function()

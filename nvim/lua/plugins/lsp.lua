@@ -25,7 +25,10 @@ return {
             "harper-ls",
             "superhtml",
             "prettier",
-            "prettierd"
+            "prettierd",
+            "json-lsp",
+            "yaml-language-server",
+            "clangd"
           },
         },
         keys = {

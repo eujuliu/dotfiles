@@ -5,13 +5,13 @@ return {
     build = ":TSUpdate",
     branch = "main",
     dependencies = {
-      {
-        "nvim-treesitter/nvim-treesitter-context",
-        opts = {
-          max_lines = 4,
-          multiline_threshold = 2,
-        },
-      },
+      -- {
+      --   "nvim-treesitter/nvim-treesitter-context",
+      --   opts = {
+      --     max_lines = 4,
+      --     multiline_threshold = 2,
+      --   },
+      -- },
     },
     config = function()
       local ts = require("nvim-treesitter")
@@ -38,7 +38,6 @@ return {
         "jsdoc",
         "json",
         "json5",
-        "jsonc",
         "lua",
         "make",
         "markdown",

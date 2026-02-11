@@ -1,0 +1,55 @@
+{
+  "Angular Component": {
+    "prefix": "ngc",
+    "body": [
+      "import { Component } from '@angular/core';",
+      "",
+      "@Component({",
+      "  selector: 'app-${1:example}',",
+      "  templateUrl: './${2:.component}.html',",
+      "  styleUrls: ['./${3:.component}.${4:scss}']",
+      "})",
+      "export class ${5:Example} {",
+      "  $0",
+      "}"
+    ],
+    "description": "Angular component boilerplate"
+  },
+  "Angular Signal Input": {
+    "prefix": "ngi",
+    "body": [
+      "readonly ${1:value} = input<${2:string}>(${3});"
+    ],
+    "description": "Angular signal input()"
+  },
+  "Angular Signal Output": {
+    "prefix": "ngo",
+    "body": [
+      "readonly ${1:change} = output<${2:void}>();"
+    ],
+    "description": "Angular signal output()"
+  },
+  "Angular Signal": {
+    "prefix": "ngs",
+    "body": [
+      "readonly ${1:count} = signal<${2:number}>(${3:0});"
+    ],
+    "description": "Angular writable signal()"
+  },
+  "Angular Computed Signal": {
+    "prefix": "ngsc",
+    "body": [
+      "readonly ${1:total} = computed(() => ${2:this.count()});"
+    ],
+    "description": "Angular computed() signal"
+  },
+  "Angular Effect": {
+    "prefix": "ngse",
+    "body": [
+      "effect(() => {",
+      "  ${1:console.log(this.count());}",
+      "});"
+    ],
+    "description": "Angular effect()"
+  }
+}

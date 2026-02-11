@@ -27,6 +27,12 @@ return {
   },
 
   {
+    "windwp/nvim-ts-autotag",
+    opts = {},
+  },
+
+
+  {
     "nvim-mini/mini.ai",
     event = "VeryLazy",
     opts = function()
