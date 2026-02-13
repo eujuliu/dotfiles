@@ -28,7 +28,8 @@ return {
             "prettierd",
             "json-lsp",
             "yaml-language-server",
-            "clangd"
+            "clangd",
+            "pyright"
           },
         },
         keys = {
