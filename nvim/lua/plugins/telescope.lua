@@ -88,14 +88,19 @@ return {
 
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
         file_ignore_patterns = {
-          "node_modules",
-          ".git"
+          "node_modules/",
+          ".git/"
         },
         wrap_results = true,
         layout_strategy = "horizontal",
+        path_display = {
+          "filename_first",
+        },
         layout_config = {
           prompt_position = "top",
-          preview_width = 0.5,
+          preview_width = 0.45,
+          width = 0.90,
+          height = 0.90
         },
         sorting_strategy = "ascending",
         mappings = {

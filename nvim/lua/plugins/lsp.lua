@@ -7,7 +7,6 @@ return {
         "mason-org/mason.nvim",
         opts = {
           ensure_installed = {
-            "js-debug-adapter",
             "biome",
             "lua-language-server",
             "selene",
@@ -29,7 +28,8 @@ return {
             "json-lsp",
             "yaml-language-server",
             "clangd",
-            "pyright"
+            "pyright",
+            "rust-analyzer"
           },
         },
         keys = {

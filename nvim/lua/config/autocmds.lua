@@ -57,7 +57,6 @@ autocmd("LspAttach", {
       map("n", "<leader>cC", vim.lsp.codelens.refresh, "Refresh Codelens")
     end
 
-    -- 🧪 Debug proof
     vim.notify("LSP attached: " .. client.name, vim.log.levels.INFO)
   end,
 })
