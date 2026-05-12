@@ -72,6 +72,26 @@ return {
         end,
       },
     },
+    keys = {
+      {
+        "<C-f>",
+        function()
+          local ls = require("luasnip")
+
+          if ls.in_snippet() then
+            ls.unlink_current()
+          end
+
+          vim.api.nvim_feedkeys(
+            vim.api.nvim_replace_termcodes("<C-t>", true, false, true),
+            "n",
+            true
+          )
+        end,
+        mode = "i",
+        silent = true,
+      },
+    },
     opts = {
       history = true,
       delete_check_events = "TextChanged",

@@ -14,6 +14,7 @@ set -gx LIBVIRT_DEFAULT_URI "qemu:///system"
 # envs
 set -gx EDITOR nvim
 set -gx THEME (gsettings get org.gnome.desktop.interface color-scheme)
+set -gx DEBUGINFOD_URLS "https://debuginfod.archlinux.org"
 
 # Java
 set -gx JAVA_HOME /usr/lib/jvm/default
@@ -55,8 +56,9 @@ alias oc "~/.config/scripts/ai-jail opencode"
 # end
 # # <<< conda initialize <<<
 
-starship init fish | source
-
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /home/julio/.lmstudio/bin
 # End of LM Studio CLI section
+
+starship init fish | source
+pyenv init - fish | source

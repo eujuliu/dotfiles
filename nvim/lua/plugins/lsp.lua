@@ -15,10 +15,6 @@ return {
             "shfmt",
             "tailwindcss-language-server",
             "css-lsp",
-            "phpcs",
-            "php-cs-fixer",
-            "vtsls",
-            "angular-language-server",
             "intelephense",
             "emmet-ls",
             "harper-ls",
@@ -29,7 +25,6 @@ return {
             "yaml-language-server",
             "clangd",
             "pyright",
-            "rust-analyzer"
           },
         },
         keys = {

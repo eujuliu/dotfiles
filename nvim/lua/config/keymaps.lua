@@ -17,17 +17,13 @@ keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
 
--- Move window
-keymap.set("n", "sh", "<C-w>h")
-keymap.set("n", "sk", "<C-w>k")
-keymap.set("n", "sj", "<C-w>j")
-keymap.set("n", "sl", "<C-w>l")
-
--- Resize window
-keymap.set("n", "<C-w><left>", "<C-w><")
-keymap.set("n", "<C-w><right>", "<C-w>>")
-keymap.set("n", "<C-w><up>", "<C-w>+")
-keymap.set("n", "<C-w><down>", "<C-w>-")
+-- Window Maximize
+keymap.set("n", "<C-w>z", function()
+  vim.cmd("wincmd |")
+  vim.cmd("wincmd _")
+end, {
+  desc = "Window Maximize",
+})
 
 -- Save with Ctrl + S
 keymap.set({ "n", "i", "v", "s" }, "<C-s>", function()

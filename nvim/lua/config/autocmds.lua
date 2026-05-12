@@ -10,16 +10,6 @@ autocmd('TextYankPost', {
   end
 })
 
--- Set indentation to 2 spaces
-augroup('setIndent', { clear = true })
-autocmd('Filetype', {
-  group = 'setIndent',
-  pattern = { 'xml', 'html', 'xhtml', 'css', 'scss', 'javascript', 'typescript',
-    'yaml', 'lua'
-  },
-  command = 'setlocal shiftwidth=2 tabstop=2'
-})
-
 -- Don't auto commenting new lines
 autocmd('BufEnter', {
   pattern = '',
@@ -27,7 +17,7 @@ autocmd('BufEnter', {
 })
 
 autocmd("LspAttach", {
-  group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
+  group = augroup("UserLspConfig", { clear = true }),
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
     if not client then
@@ -50,13 +40,13 @@ autocmd("LspAttach", {
     map("n", "gy", vim.lsp.buf.type_definition, "Goto Type Definition")
     map("n", "gD", vim.lsp.buf.declaration, "Goto Declaration")
     map({ "n", "x" }, "<leader>ca", vim.lsp.buf.code_action, "Code Action")
-    map("n", "<leader>cr", vim.lsp.buf.rename, "Rename")
+    map("n", "<leader>cr", vim.lsp.buf.rename, "Rename Buffer")
 
     if client.server_capabilities.codeLensProvider then
       map("n", "<leader>cc", vim.lsp.codelens.run, "Run Codelens")
       map("n", "<leader>cC", vim.lsp.codelens.refresh, "Refresh Codelens")
     end
 
-    vim.notify("LSP attached: " .. client.name, vim.log.levels.INFO)
+    -- vim.notify("LSP attached: " .. client.name, vim.log.levels.INFO)
   end,
 })

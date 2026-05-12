@@ -20,16 +20,15 @@ return {
         "bash",
         "comment",
         "css",
+        "cpp",
         "scss",
         "diff",
         "dockerfile",
-        "elixir",
         "git_config",
         "gitcommit",
         "gitignore",
         "groovy",
         "go",
-        "heex",
         "hcl",
         "html",
         "http",
@@ -55,8 +54,9 @@ return {
         "terraform",
         "typst",
         "toml",
-        "tsx",
         "typescript",
+        "typescriptreact",
+        "tsx",
         "vim",
         "vimdoc",
         "yaml",
@@ -66,13 +66,17 @@ return {
         ts.install(parser)
       end
 
-      vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
-      vim.wo[0][0].foldmethod = "expr"
-      vim.api.nvim_command("set nofoldenable")
-
       vim.api.nvim_create_autocmd("FileType", {
         pattern = parsers,
         callback = function()
+          vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+          vim.wo[0][0].foldmethod = 'expr'
+
+
+          vim.api.nvim_command("set nofoldenable")
+
+          vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
           vim.treesitter.start()
         end,
       })
