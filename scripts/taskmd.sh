@@ -94,7 +94,6 @@ insert_uuid_on_file() {
 
 IGNORED=()
 
-PCHECKED="false"
 PID=""
 CID=""
 UUID=""
@@ -120,10 +119,18 @@ while IFS= read -r line; do
   if [[ "$indent" -gt 0 ]]; then
     child="true"
   else
-    PCHECKED="$checked"
+    if [[ "$line" =~ task: ]]; then
+      task_part="${line#*task:}"
+      id="${task_part%% *}"
+      id="${id%%-*}"
+
+      task "$id" modify status:pending
+
+      PID=$(task _get "$id".id)
+    fi
   fi
 
-  if [[ $checked = "true" || $child = "true" && $PCHECKED = "true" || "$line" =~ task: ]]; then
+  if [[ $checked = "true" || "$line" =~ task: ]]; then
     IGNORED+=("$description|$priority|$due")
 
     continue
