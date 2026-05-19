@@ -8,18 +8,20 @@ if ! command -v awk >/dev/null; then
 fi
 
 if [ $# -lt 1 ]; then
-  echo "Usage: $0 <markdown-file> <project-name>"
+  echo "Usage: $0 <markdown-file> <project-name> [-p, --prefixes]"
   exit 1
 fi
 
 FILE="$1"
+shift
 
 if [ ! -f "$FILE" ]; then
   echo "File not found: $FILE"
   exit 1
 fi
 
-PROJECT="${2:-}"
+PROJECT="${1:-}"
+shift
 
 echo "=== Taskwarrior Markdown Importer ==="
 
@@ -33,6 +35,20 @@ if [ -z "$PROJECT" ]; then
     fi
   done
 fi
+
+USE_PREFIXES=false
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+  -p | --prefixes)
+    USE_PREFIXES=true
+    shift
+    ;;
+  *)
+    break
+    ;;
+  esac
+done
 
 echo "Project: $PROJECT, File: $FILE"
 
@@ -92,14 +108,86 @@ insert_uuid_on_file() {
   sed -i "${lineno}s|\$| <!-- task:${short} -->|" "$file"
 }
 
-IGNORED=()
+declare -A PREFIXES
+HAVE_TASKS=false
+
+print_tasks() {
+  local i=0
+
+  while IFS= read -r line; do
+    ((i += 1))
+
+    if [[ "$line" =~ ^[[:space:]]*[-*+][[:space:]]*\[[xX\ ]\] && ! "$line" =~ task: ]]; then
+      printf "%d %s\n" "$i" "$line"
+      HAVE_TASKS=true
+    fi
+
+  done <"$FILE"
+}
+
+apply_prefix_range() {
+  local expr="$1"
+  local prefix="$2"
+
+  IFS=',' read -ra parts <<<"$expr"
+
+  for part in "${parts[@]}"; do
+    if [[ "$part" =~ ^([0-9]+)-([0-9]+)$ ]]; then
+      start="${BASH_REMATCH[1]}"
+      end="${BASH_REMATCH[2]}"
+
+      for ((n = start; n <= end; n++)); do
+        PREFIXES["$n"]="$prefix"
+      done
+    elif [[ "$part" =~ ^[0-9]+$ ]]; then
+      PREFIXES["$part"]="$prefix"
+    fi
+  done
+}
+
+ask_prefixes() {
+  echo
+  echo "=== TASKS ==="
+
+  print_tasks
+
+  echo
+  echo "=== PREFIX CONFIG ==="
+
+  if [[ "$HAVE_TASKS" = false ]]; then
+    return
+  fi
+
+  while true; do
+    read -rp "Lines? (Let blank for skip) " lines
+
+    if [[ -z "${lines// /}" ]]; then
+      break
+    fi
+
+    local prefix=""
+
+    while [[ -z "${prefix// /}" ]]; do
+      read -rp "Prefix? " prefix
+    done
+
+    apply_prefix_range "$lines" "$prefix"
+
+    echo
+  done
+}
+
+if [[ "$USE_PREFIXES" == true ]]; then
+  ask_prefixes
+fi
 
 PID=""
 CID=""
 UUID=""
+FILE_PATH=$(realpath "$FILE")
 
-tmp=$(mktemp)
-cp "$FILE" "$tmp"
+TMP_FILE=$(mktemp)
+cp "$FILE" "$TMP_FILE"
 
 i=0
 
@@ -130,13 +218,17 @@ while IFS= read -r line; do
     fi
   fi
 
-  if [[ $checked = "true" || "$line" =~ task: ]]; then
-    IGNORED+=("$description|$priority|$due")
-
+  if [[ "$checked" = "true" || "$line" =~ task: ]]; then
     continue
   fi
 
-  ID=$(task add "$description" project:"$PROJECT" priority:"$priority" due:"$due" mdfile:"$FILE" |
+  prefix="${PREFIXES["$i"]:-}"
+
+  if [[ "$USE_PREFIXES" = true && -n "$prefix" ]]; then
+    description="$prefix: $description"
+  fi
+
+  ID=$(task add "$description" project:"$PROJECT" priority:"$priority" due:"$due" mdfile:"$FILE_PATH" |
     grep -oP 'Created task \K[0-9]+')
 
   if [[ "$child" = "false" ]]; then
@@ -154,10 +246,6 @@ while IFS= read -r line; do
   insert_uuid_on_file "$FILE" "$i" "$UUID"
 
   # echo "$indent|$checked|$description|$priority|$due"
-done <"$tmp"
+done <"$TMP_FILE"
 
-rm "$tmp"
-
-echo "=== IGNORED ==="
-printf "%s\n" "${IGNORED[@]}"
-echo "=== === === ==="
+rm "$TMP_FILE"
