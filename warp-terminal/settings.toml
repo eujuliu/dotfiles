@@ -8,9 +8,7 @@ input_mode = "pinned_to_bottom"
 
 [appearance.themes]
 system_theme = true
-theme = {
-  custom = { name = "Minlight", path = "/home/julio/.local/share/warp-terminal/themes/MinLight.yaml" },
-}
+theme = "dark"
 selected_system_themes = {
   dark = {
     custom = { name = "Mindark", path = "/home/julio/.local/share/warp-terminal/themes/MinDark.yaml" },
