@@ -49,6 +49,7 @@ focus_pane_on_hover = false
 enabled = false
 
 [terminal]
+osc52_clipboard_access = "write_only"
 
 [terminal.input]
 completions_open_while_typing = false
@@ -65,6 +66,9 @@ right_alt = false
 [code.editor]
 open_file_editor = "system_default"
 open_code_panels_file_editor = "env_editor"
+show_project_explorer = true
+show_global_search = true
+show_code_review_button = true
 
 [text_editing]
 vim_mode_enabled = false
@@ -141,5 +145,14 @@ is_any_ai_enabled = false
 [agents.warp_agent.input]
 nld_in_terminal_enabled = true
 
+[agents.warp_agent.other]
+show_agent_notifications = false
+
+[agents.third_party]
+should_render_cli_agent_toolbar = true
+
 [account]
 is_settings_sync_enabled = true
+
+[warp_drive]
+enabled = true
