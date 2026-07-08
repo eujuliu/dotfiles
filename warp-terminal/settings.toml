@@ -49,7 +49,7 @@ focus_pane_on_hover = false
 enabled = false
 
 [terminal]
-osc52_clipboard_access = "write_only"
+osc52_clipboard_access = "read_write"
 
 [terminal.input]
 completions_open_while_typing = false
