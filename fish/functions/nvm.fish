@@ -1,7 +1,7 @@
 function nvm --description "Simple Node version manager for fish shell"
     set -g NODEVM "$HOME/.node"
     set -g NODEVM_VERSIONS "$NODEVM/versions"
-    set -g NODEVM_CURRENT "$NODEVM/current"
+    set -g NODEVM_DEFAULT "$NODEVM/default"
 
     set -l cmd $argv[1]
 
@@ -125,16 +125,16 @@ function nvm --description "Simple Node version manager for fish shell"
                         .[] |
                         [
                             .version[1:],
-                            (if .lts then .lts else "None" end),
-                            (if .security then "yes" else "false" end),
+                            (if .lts then "lts/" + .lts else "None" end),
+                            (if .security then "Secure" else "InSecure" end),
                             .date
                         ] |
                         @tsv
                     ' | while read -l vers lts security date
                         if  contains -- $vers $installed 
-                            set mark "*"
+                          set mark "☒"
                         else
-                            set mark ""
+                          set mark "☐"
                         end
 
                         printf "%-10s %-10s %-12s %-10s %s\n" \
@@ -176,7 +176,7 @@ function nvm --description "Simple Node version manager for fish shell"
             end
 
             mkdir -p "$NODEVM"
-            ln -sfn "$src" "$NODEVM_CURRENT"
+            ln -sfn "$src" "$NODEVM_DEFAULT"
             or begin
                 echo "Failed to set current symlink" >&2
                 return 1
@@ -196,21 +196,21 @@ function nvm --description "Simple Node version manager for fish shell"
                 if string match -rq "^$NODEVM/.*/bin\$" -- $p
                     continue
                 end
-                if test "$p" = "$NODEVM_CURRENT/bin"
+                if test "$p" = "$NODEVM_DEFAULT/bin"
                     continue
                 end
                 set cleaned $cleaned $p
             end
-            set -gx PATH "$NODEVM_CURRENT/bin" $cleaned
+            set -gx PATH "$NODEVM_DEFAULT/bin" $cleaned
 
             echo "Now using Node $ver"
             node -v
 
         case current
-            if test -L "$NODEVM_CURRENT"
-                echo "current -> "(readlink "$NODEVM_CURRENT")
-                if test -x "$NODEVM_CURRENT/bin/node"
-                    "$NODEVM_CURRENT/bin/node" -v
+            if test -L "$NODEVM_DEFAULT"
+                echo "current -> "(readlink "$NODEVM_DEFAULT")
+                if test -x "$NODEVM_DEFAULT/bin/node"
+                    "$NODEVM_DEFAULT/bin/node" -v
                 end
             else
                 echo "No active version set"

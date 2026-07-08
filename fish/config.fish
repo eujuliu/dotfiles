@@ -34,6 +34,7 @@ set -gx PATH node_modules/.bin $PATH
 set -gx PATH $GOPATH/bin $PATH
 set -gx PATH $HOME/.local/share/nvim/mason/bin $PATH
 set -gx PATH /opt/cuda/bin $PATH
+set -gx PATH $HOME/.node/versions/default/bin $PATH
 
 # NOMA
 if test -L "$HOME/node/current"
