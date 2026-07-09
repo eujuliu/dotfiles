@@ -36,20 +36,6 @@ if [ -z "$PROJECT" ]; then
   done
 fi
 
-USE_PREFIXES=false
-
-while [[ $# -gt 0 ]]; do
-  case "$1" in
-  -p | --prefixes)
-    USE_PREFIXES=true
-    shift
-    ;;
-  *)
-    break
-    ;;
-  esac
-done
-
 echo "Project: $PROJECT, File: $FILE"
 
 get_task() {
@@ -108,144 +94,43 @@ insert_uuid_on_file() {
   sed -i "${lineno}s|\$| <!-- task:${short} -->|" "$file"
 }
 
-declare -A PREFIXES
-HAVE_TASKS=false
-
-print_tasks() {
-  local i=0
-
-  while IFS= read -r line; do
-    ((i += 1))
-
-    if [[ "$line" =~ ^[[:space:]]*[-*+][[:space:]]*\[[xX\ ]\] && ! "$line" =~ task: ]]; then
-      printf "%d %s\n" "$i" "$line"
-      HAVE_TASKS=true
-    fi
-
-  done <"$FILE"
-}
-
-apply_prefix_range() {
-  local expr="$1"
-  local prefix="$2"
-
-  IFS=',' read -ra parts <<<"$expr"
-
-  for part in "${parts[@]}"; do
-    if [[ "$part" =~ ^([0-9]+)-([0-9]+)$ ]]; then
-      start="${BASH_REMATCH[1]}"
-      end="${BASH_REMATCH[2]}"
-
-      for ((n = start; n <= end; n++)); do
-        PREFIXES["$n"]="$prefix"
-      done
-    elif [[ "$part" =~ ^[0-9]+$ ]]; then
-      PREFIXES["$part"]="$prefix"
-    fi
-  done
-}
-
-ask_prefixes() {
-  echo
-  echo "=== TASKS ==="
-
-  print_tasks
-
-  echo
-  echo "=== PREFIX CONFIG ==="
-
-  if [[ "$HAVE_TASKS" = false ]]; then
-    return
-  fi
-
-  while true; do
-    read -rp "Lines? (Let blank for skip) " lines
-
-    if [[ -z "${lines// /}" ]]; then
-      break
-    fi
-
-    local prefix=""
-
-    while [[ -z "${prefix// /}" ]]; do
-      read -rp "Prefix? " prefix
-    done
-
-    apply_prefix_range "$lines" "$prefix"
-
-    echo
-  done
-}
-
-if [[ "$USE_PREFIXES" == true ]]; then
-  ask_prefixes
-fi
-
-PID=""
-CID=""
-UUID=""
+PARENT=""
 FILE_PATH=$(realpath "$FILE")
+COLUMN=0
 
-TMP_FILE=$(mktemp)
-cp "$FILE" "$TMP_FILE"
+mapfile -t lines <"$FILE"
 
-i=0
-
-while IFS= read -r line; do
-  ((i += 1))
+for ((i = 0; i < ${#lines[@]}; i++)); do
+  line="${lines[i]}"
+  next_line="${lines[i + 1]:-}"
 
   task=$(get_task "$line")
+  IFS=$'\x1f' read -r indent _ description priority due <<<"$task"
 
-  IFS=$'\x1f' read -r indent checked description priority due <<<"$task"
+  if ((indent < COLUMN)); then
+    PARENT=""
+  fi
 
-  if [[ -z "${description// /}" ]]; then
+  COLUMN="$indent"
+
+  if [[ -z "${description// /}" || "$line" =~ task: ]]; then
     continue
   fi
 
-  child="false"
+  if [[ -n "$next_line" ]]; then
+    next_task=$(get_task "$next_line")
+    IFS=$'\x1f' read -r next_indent _ _ _ _ <<<"$next_task"
 
-  if [[ "$indent" -gt 0 ]]; then
-    child="true"
-  else
-    if [[ "$line" =~ task: ]]; then
-      task_part="${line#*task:}"
-      id="${task_part%% *}"
-      id="${id%%-*}"
-
-      task "$id" modify status:pending
-
-      PID=$(task _get "$id".id)
+    if ((next_indent > indent)); then
+      PARENT="$description"
+      continue
     fi
   fi
 
-  if [[ "$checked" = "true" || "$line" =~ task: ]]; then
-    continue
-  fi
-
-  prefix="${PREFIXES["$i"]:-}"
-
-  if [[ "$USE_PREFIXES" = true && -n "$prefix" ]]; then
-    description="$prefix: $description"
-  fi
-
-  ID=$(task add "$description" project:"$PROJECT" priority:"$priority" due:"$due" mdfile:"$FILE_PATH" |
+  id=$(task add "$description" project:"${PARENT:-$PROJECT}" priority:"$priority" due:"$due" mdfile:"$FILE_PATH" |
     grep -oP 'Created task \K[0-9]+')
 
-  if [[ "$child" = "false" ]]; then
-    PID="$ID"
-  else
-    CID="$ID"
+  uuid=$(task _get "$id".uuid)
 
-    task "$CID" modify +P"$PID" >/dev/null
-
-    task "$PID" modify depends:"$CID" >/dev/null
-  fi
-
-  UUID=$(task _get "$ID".uuid)
-
-  insert_uuid_on_file "$FILE" "$i" "$UUID"
-
-  # echo "$indent|$checked|$description|$priority|$due"
-done <"$TMP_FILE"
-
-rm "$TMP_FILE"
+  insert_uuid_on_file "$FILE" "$((i + 1))" "$uuid"
+done

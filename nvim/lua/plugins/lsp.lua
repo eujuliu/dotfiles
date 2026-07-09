@@ -24,7 +24,6 @@ return {
             "json-lsp",
             "yaml-language-server",
             "clangd",
-            "pyright",
           },
         },
         keys = {

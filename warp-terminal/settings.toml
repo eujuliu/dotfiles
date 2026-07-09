@@ -156,3 +156,8 @@ is_settings_sync_enabled = true
 
 [warp_drive]
 enabled = true
+
+[warpify]
+
+[warpify.ssh]
+enable_ssh_warpification = false

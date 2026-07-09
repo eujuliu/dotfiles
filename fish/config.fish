@@ -15,6 +15,7 @@ set -gx LIBVIRT_DEFAULT_URI "qemu:///system"
 set -gx EDITOR nvim
 set -gx THEME (gsettings get org.gnome.desktop.interface color-scheme)
 set -gx DEBUGINFOD_URLS "https://debuginfod.archlinux.org"
+set -gx TASKRC ~/.config/.task/taskrc
 
 # Java
 set -gx JAVA_HOME /usr/lib/jvm/default
