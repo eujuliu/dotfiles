@@ -14,6 +14,8 @@ return {
       { "<leader>gc", "<cmd>Telescope git_commits<CR>",         desc = "Commits" },
       { "<leader>gs", "<cmd>Telescope git_status<CR>",          desc = "Status" },
       { "<leader>gS", "<cmd>Telescope git_stash<cr>",           desc = "Git Stash" },
+      -- clipboard
+      { "<leader>sc", "<cmd>Telescope neoclip<cr>",             desc = "Clipboard" },
       -- search
       { "<leader>sd", "<cmd>Telescope diagnostics<cr>",         desc = "Diagnostics" },
       { "<leader>sD", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Buffer Diagnostics" },

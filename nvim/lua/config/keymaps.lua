@@ -46,3 +46,15 @@ keymap.set("n", "<Esc>", function()
     vim.cmd("nohlsearch")
   end
 end, { desc = "Clear search highlight" })
+
+-- Open definition in a vertical split
+keymap.set('n', 'gV', function()
+  vim.cmd('vsplit')
+  vim.lsp.buf.definition()
+end, { desc = 'Go to definition in vertical split' })
+
+-- Open definition in a new tab
+keymap.set('n', 'gT', function()
+  vim.cmd('tabsplit')
+  vim.lsp.buf.definition()
+end, { desc = 'Go to definition in new tab' })

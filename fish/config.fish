@@ -36,6 +36,8 @@ set -gx PATH $GOPATH/bin $PATH
 set -gx PATH $HOME/.local/share/nvim/mason/bin $PATH
 set -gx PATH /opt/cuda/bin $PATH
 set -gx PATH $HOME/.node/versions/default/bin $PATH
+set -gx PATH $HOME/.local/share/gem/ruby/3.4.0/bin $PATH
+set -gx PATH $HOME/.lmstudio/bin $PATH
 
 # NOMA
 if test -L "$HOME/node/current"
@@ -55,3 +57,14 @@ alias vi nvim
 alias tt taskwarrior-tui
 
 starship init fish | source
+
+# Added by LM Studio CLI tool (lms)
+set -gx PATH $PATH /home/julio/.lmstudio/bin
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+# >>> grok installer >>>
+fish_add_path $HOME/.grok/bin
+# <<< grok installer <<<
