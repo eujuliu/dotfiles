@@ -50,6 +50,7 @@ enabled = false
 
 [terminal]
 osc52_clipboard_access = "read_write"
+show_terminal_zero_state_block = false
 
 [terminal.input]
 completions_open_while_typing = false
@@ -71,7 +72,7 @@ show_global_search = true
 show_code_review_button = true
 
 [text_editing]
-vim_mode_enabled = false
+vim_mode_enabled = true
 vim_unnamed_system_clipboard = true
 
 [privacy]
@@ -147,9 +148,49 @@ nld_in_terminal_enabled = true
 
 [agents.warp_agent.other]
 show_agent_notifications = false
+should_render_use_agent_toolbar_for_user_commands = false
 
 [agents.third_party]
 should_render_cli_agent_toolbar = true
+
+[agents.execution_profiles]
+
+[agents.execution_profiles.default]
+apply_code_diffs = "agent_decides"
+ask_user_question = "always_ask"
+autosync_plans_to_warp_drive = true
+command_allowlist = []
+command_denylist = [
+  'bash(\s.*)?',
+  'fish(\s.*)?',
+  'pwsh(\s.*)?',
+  'sh(\s.*)?',
+  'zsh(\s.*)?',
+  'curl(\s.*)?',
+  'eval(\s.*)?',
+  'exec(\s.*)?',
+  'source(\s.*)?',
+  'wget(\s.*)?',
+  'dig(\s.*)?',
+  'nslookup(\s.*)?',
+  'host(\s.*)?',
+  'ssh(\s.*)?',
+  'scp(\s.*)?',
+  'rsync(\s.*)?',
+  'telnet(\s.*)?',
+  'rm(\s.*)?',
+]
+computer_use = "never"
+directory_allowlist = []
+execute_commands = "always_ask"
+mcp_allowlist = []
+mcp_denylist = []
+mcp_permissions = "agent_decides"
+name = "Default"
+read_files = "agent_decides"
+run_agents = "always_ask"
+web_search_enabled = true
+write_to_pty = "always_ask"
 
 [account]
 is_settings_sync_enabled = true
@@ -161,3 +202,6 @@ enabled = true
 
 [warpify.ssh]
 enable_ssh_warpification = false
+
+[system]
+force_x11 = true

@@ -25,6 +25,13 @@ autocmd("LspAttach", {
     end
 
     local bufnr = args.buf
+    local buf_name = vim.api.nvim_buf_get_name(bufnr)
+
+    if string.find(buf_name, "diffview://") or string.find(buf_name, "neogit://") then
+      vim.schedule(function()
+        vim.lsp.buf_detach_client(bufnr, args.data.client_id)
+      end)
+    end
 
     local map = function(mode, lhs, rhs, desc)
       vim.keymap.set(mode, lhs, rhs, {

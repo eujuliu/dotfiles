@@ -23,7 +23,16 @@ return {
         "<leader>n",
         function()
           if Snacks.config.picker and Snacks.config.picker.enabled then
-            Snacks.picker.notifications()
+            Snacks.picker.notifications({
+              layout = "telescope",
+              win = {
+                preview = {
+                  wo = {
+                    wrap = true,
+                  },
+                },
+              },
+            })
           else
             Snacks.notifier.show_history()
           end

@@ -1,0 +1,8 @@
+[12:01:01 2026-08-18] FETCHING Version 2.44.0
+[12:01:01 2026-08-18] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.44.0/spicetify-2.44.0-linux-amd64.tar.gz
+[12:01:02 2026-08-18] EXTRACTING /home/julio/.spicetify/spicetify.tar.gz
+[12:01:02 2026-08-18] SETTING EXECUTABLE PERMISSIONS TO /home/julio/.spicetify/spicetify
+[12:01:02 2026-08-18] REMOVING /home/julio/.spicetify/spicetify.tar.gz
+[12:01:02 2026-08-18] spicetify path already set in /home/julio/.config/fish/config.fish, continuing...
+[12:01:02 2026-08-18] spicetify v2.44.0 was installed successfully to /home/julio/.spicetify
+[12:01:02 2026-08-18] Run 'spicetify --help' to get started
